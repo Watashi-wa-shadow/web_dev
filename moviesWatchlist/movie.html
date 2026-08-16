@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Watchlist </title>
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Movie Watchlist</h1>
+        <div class="form">
+
+            <input type="text" id="movieName" placeholder="Movie name">
+
+            <input type="text" id="genre" placeholder="Genre">
+
+            <input type="number" id="rating" placeholder="Rating" min="0" max="10">
+
+            <select id="status">
+                <option value="unwatched">Unwatched</option>
+                <option value="watched">Watched</option>
+            </select>
+
+            <button id="addButton">Add Movie</button>
+
+        </div>
+
+        <div class="filters">
+            <button id="allButton">All</button>
+            <button id="watchedButton">Watched</button>
+            <button id="unwatchedButton">Unwatched</button>
+        </div>
+
+        <div id="movieList"></div>
+
+    </div>
+
+    <script src="movie.js"></script>
+</body>
+</html>

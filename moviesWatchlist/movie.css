@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #938BD0;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+    background-color: #DCDDF4;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(50, 60, 120, 0.25);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #303060;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #AAB9DD;
+    border-radius: 6px;
+    background-color: #F0F3FC;
+    color: #303060;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #6F8FD8;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#addButton {
+    background-color: #536DCE;
+    color: white;
+}
+
+#addButton:hover {
+    background-color: #435BB5;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filters button {
+    flex: 1;
+    background-color: #DDE8FF;
+    color: #303060;
+}
+
+.filters button:hover {
+    background-color: #C7D8FF;
+}
+
+.movie {
+    border: 1px solid #B8C7E6;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #E8EDFA;
+}
+
+.movie h3 {
+    margin: 0 0 8px 0;
+    color: #303060;
+}
+
+.movie p {
+    margin: 5px 0;
+    color: #454568;
+}
+
+.movie button {
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.delete {
+    background-color: #E85D75;
+    color: white;
+}
+
+.watch {
+    background-color: #5B9BD5;
+    color: white;
+}
+
+.watched {
+    opacity: 0.6;
+}
