@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a2acbd;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 450px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(77, 128, 118, 0.25);
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 8px;
+    color: #4d8076;
+}
+
+.subtitle {
+    text-align: center;
+    color: #627898;
+    margin-bottom: 30px;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group,
+.currency-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    color: #4d8076;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a2acbd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    color: #4d8076;
+}
+
+input:focus,
+select:focus {
+    border-color: #4d8076;
+    box-shadow: 0 0 0 2px #a2acbd;
+}
+
+.currency-section {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.currency-box {
+    flex: 1;
+}
+
+.swap-button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #627898;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.swap-button:hover {
+    background-color: #4d8076;
+}
+
+.convert-button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4d8076;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.convert-button:hover {
+    background-color: #627898;
+}
+
+.result {
+    min-height: 70px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #a2acbd;
+    color: #4d8076;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.result p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
