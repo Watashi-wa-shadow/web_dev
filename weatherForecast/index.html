@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>India Weather Dashboard</title>
+
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>India Weather Dashboard</h1>
+
+        <p class="subtitle">
+            Search weather information for any location in India
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter an Indian city"
+            >
+
+            <button id="searchButton">
+                Search
+            </button>
+
+        </div>
+
+        <p id="message"></p>
+
+        <div id="weatherContainer" class="weather-container">
+
+            <div class="location">
+                <h2 id="cityName">City</h2>
+                <p id="coordinates">Latitude: -- | Longitude: --</p>
+            </div>
+
+            <div class="weather-main">
+
+                <div class="temperature">
+                    <span id="temperature">--</span>
+                    <span>°C</span>
+                </div>
+
+                <p id="weatherCondition">
+                    Weather condition
+                </p>
+
+            </div>
+
+            <div class="weather-details">
+
+                <div class="detail">
+                    <h3>Humidity</h3>
+                    <p id="humidity">-- %</p>
+                </div>
+
+                <div class="detail">
+                    <h3>Wind Speed</h3>
+                    <p id="windSpeed">-- km/h</p>
+                </div>
+
+                <div class="detail">
+                    <h3>Weather Code</h3>
+                    <p id="weatherCode">--</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="history-container">
+
+            <h2>Search History</h2>
+
+            <div id="history">
+                <!-- Previous searches will appear here -->
+            </div>
+
+        </div>
+
+        <p class="credit">
+            Weather data by Open-Meteo.com
+        </p>
+
+    </div>
+
+    <script src="weather.js"></script>
+
+</body>
+</html>
