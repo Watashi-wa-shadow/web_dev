@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejected Jobs</title>
+    <link rel="stylesheet" href="jobApplicationTrcaker.css">
+</head>
+<body>
+
+<header>
+    <h1>Rejected Jobs</h1>
+    <p>Applications that were not successful.</p>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="applied.html">Applied</a>
+    <a href="interviews.html">Interviews</a>
+    <a href="selected.html">Selected</a>
+    <a href="rejected.html">Rejected</a>
+</nav>
+
+<main>
+
+    <section class="page-header">
+        <h2>Rejected Applications</h2>
+        <p id="rejectedPageCount">0 applications</p>
+    </section>
+
+    <section id="rejectedList" class="application-list">
+
+        <div class="empty-state">
+            <h3>No rejected jobs</h3>
+            <p>Your rejected applications will appear here.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="utils/rejected.js" type = "module"></script>
+
+</body>
+</html>

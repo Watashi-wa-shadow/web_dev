@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interviews</title>
+    <link rel="stylesheet" href="jobApplicationTrcaker.css">
+</head>
+<body>
+
+<header>
+    <h1>Interviews</h1>
+    <p>Track the jobs where you have an interview.</p>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="applied.html">Applied</a>
+    <a href="interviews.html">Interviews</a>
+    <a href="selected.html">Selected</a>
+    <a href="rejected.html">Rejected</a>
+</nav>
+
+<main>
+
+    <section class="page-header">
+        <h2>Interview Applications</h2>
+        <p id="interviewPageCount">0 applications</p>
+    </section>
+
+    <section id="interviewList" class="application-list">
+
+        <div class="empty-state">
+            <h3>No interviews yet</h3>
+            <p>Applications with interviews will appear here.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="utils/interview.js" type = "module"></script>
+
+</body>
+</html>
