@@ -1,17 +1,28 @@
-import { arr } from "./data.js";
-let totalCountVal = document.querySelector("#totalCount");
-let addButton = document.querySelector(".add-btn");
+import { arr as initialData } from "./data.js";
+
+// Load from localStorage if available, otherwise fall back to data.js
+let arr = JSON.parse(localStorage.getItem("applications")) || initialData;
+
+//Dom elements
+
+const jobForm = document.querySelector("#jobForm");
 let input  = document.querySelector("#company");
 let position  = document.querySelector("#position");
 let loc  = document.querySelector("#location");
 let salary  = document.querySelector("#salary");
 let date  = document.querySelector("#date");
 let stat  = document.querySelector("#status");
-let applications = document.querySelector("#emptyState");
+const applicationList = document.querySelector("#applicationList");
+//count elements 
+
+let totalCountVal = document.querySelector("#totalCount");
 let appliedCount = document.querySelector("#appliedCount");
+let applicationCount = document.querySelector("#applicationCount");
 let interviewCount = document.querySelector("#interviewCount");
 let selectedCount = document.querySelector("#selectedCount");
 let rejectedCount = document.querySelector("#rejectedCount");
+
+//1-second top-center floating popup
 function showToast(message) {
     // Check if an existing toast is already active to prevent duplicates
     let existingToast = document.querySelector(".floating-toast");
@@ -48,7 +59,10 @@ function showToast(message) {
         setTimeout(() => toast.remove(), 200);
     }, 1000);
 }
-addButton.addEventListener("click",() =>{
+// Form Submit Handler (Stops Page Reload & Prevents Duplicates)
+jobForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevents duplicate execution from page refresh
+
     if (
         !input.value.trim() ||
         !position.value.trim() ||
@@ -58,19 +72,22 @@ addButton.addEventListener("click",() =>{
         !stat.value.trim()
     ) {
         showToast("Please fill out all the necessary details");
-        return; // Stop execution
+        return;
     }
+
     arr.push({
-        companyName : input.value,
-        position : position.value,
-        location : loc.value,
-        salary : salary.value,
-        date : date.value,
-        status : stat.value,
-    })
+        companyName: input.value.trim(),
+        position: position.value.trim(),
+        location: loc.value.trim(),
+        salary: salary.value.trim(),
+        date: date.value,
+        status: stat.value,
+    });
+
     localStorage.setItem("applications", JSON.stringify(arr));
-    display();
-})
+    jobForm.reset();
+    display(arr);
+});
 function applyCardStyle(div) {
     Object.assign(div.style, {
         marginBottom: "10px",
@@ -114,13 +131,20 @@ function applyCardStyle(div) {
     }
 }
 function display(listToRender = arr) {
-    applications.innerHTML = "";
+    applicationList.innerHTML = "";
+    if (listToRender.length === 0) {
+        applicationList.innerHTML = `
+            <div class="empty-state" id="emptyState">
+                <h3>No applications yet</h3>
+                <p>Add your first job application above.</p>
+            </div>
+        `;
+        displayValue();
+        return;
+    }
     for (let i = 0; i < listToRender.length; i++) {
         let div = document.createElement("div");
         div.classList.add("container");
-        let btn = document.createElement("button");
-        btn.classList.add("btn");
-        btn.innerText = "Remove";
         div.innerHTML = `
             <p>Company name: ${listToRender[i].companyName}</p>
             <p>Position: ${listToRender[i].position}</p>
@@ -129,10 +153,9 @@ function display(listToRender = arr) {
             <p>Date: ${listToRender[i].date}</p>
             <p>Status: ${listToRender[i].status}</p>
         `;
-        div.append(btn);
-        applyCardStyle(div);
-        applications.append(div);
-        
+        let btn = document.createElement("button");
+        btn.classList.add("btn");
+        btn.innerText = "Remove";
         btn.addEventListener("click",() => {
           let index = arr.indexOf(listToRender[i]);
           if(index !== -1){
@@ -140,13 +163,18 @@ function display(listToRender = arr) {
             localStorage.setItem("applications", JSON.stringify(arr));
             display();
           }
-        })
+        });
+        div.append(btn);
+        applyCardStyle(div);
+        applicationList.append(div);
     }
     displayValue();
 }
 display();
 function displayValue(){
     totalCountVal.innerHTML = arr.length;
+    if (applicationCount)
+        applicationCount.innerHTML = `${arr.length} applications`;
     applied();
     interview();
     selected();
@@ -221,13 +249,10 @@ filterStatus.addEventListener("change",(event) =>{
 })
 function wishlistDisplay(){
     let filteredArr = arr.filter(item => item.status === "Wishlist");
-    applications.innerHTML = ``;
+    applicationList.innerHTML = ``;
     for(let i=0;i<filteredArr.length;i++){
         let div = document.createElement("div");
         div.classList.add("container");
-        let btn = document.createElement("button");
-        btn.classList.add("btn");
-        btn.innerText = "Remove";
         div.innerHTML = `
             <p>Company name: ${filteredArr[i].companyName}</p>
             <p>Position: ${filteredArr[i].position}</p>
@@ -236,9 +261,9 @@ function wishlistDisplay(){
             <p>Date: ${filteredArr[i].date}</p>
             <p>Status: ${filteredArr[i].status}</p>
         `;
-        div.append(btn);
-        applyCardStyle(div);
-        applications.append(div);
+        let btn = document.createElement("button");
+        btn.classList.add("btn");
+        btn.innerText = "Remove";
         btn.addEventListener("click",() => {
           let index = arr.indexOf(filteredArr[i]);
           if(index !== -1){
@@ -246,19 +271,19 @@ function wishlistDisplay(){
             localStorage.setItem("applications", JSON.stringify(arr));
             wishlistDisplay();
           }
-        })
+        });
+        div.append(btn);
+        applyCardStyle(div);
+        applicationList.append(div);
     }
     displayValue();
 }
 function appliedDisplay(){
     let filteredArr = arr.filter(item => item.status === "Applied");
-    applications.innerHTML = ``;
+    applicationList.innerHTML = ``;
     for(let i=0;i<filteredArr.length;i++){
         let div = document.createElement("div");
         div.classList.add("container");
-        let btn = document.createElement("button");
-        btn.classList.add("btn");
-        btn.innerText = "Remove";
         div.innerHTML = `
             <p>Company name: ${filteredArr[i].companyName}</p>
             <p>Position: ${filteredArr[i].position}</p>
@@ -267,9 +292,9 @@ function appliedDisplay(){
             <p>Date: ${filteredArr[i].date}</p>
             <p>Status: ${filteredArr[i].status}</p>
         `;
-        div.append(btn);
-        applyCardStyle(div);
-        applications.append(div);
+        let btn = document.createElement("button");
+        btn.classList.add("btn");
+        btn.innerText = "Remove";
         btn.addEventListener("click",() => {
           let index = arr.indexOf(filteredArr[i]);
           if(index !== -1){
@@ -277,19 +302,19 @@ function appliedDisplay(){
             localStorage.setItem("applications", JSON.stringify(arr));
             appliedDisplay();
           }
-        })
+        });
+        div.append(btn);
+        applyCardStyle(div);
+        applicationList.append(div);
     }
     displayValue();
 }
 function interviewDisplay(){
     let filteredArr = arr.filter(item => item.status === "Interview");
-    applications.innerHTML = ``;
+    applicationList.innerHTML = ``;
     for(let i=0;i<filteredArr.length;i++){
         let div = document.createElement("div");
         div.classList.add("container");
-        let btn = document.createElement("button");
-        btn.classList.add("btn");
-        btn.innerText = "Remove";
         div.innerHTML = `
             <p>Company name: ${filteredArr[i].companyName}</p>
             <p>Position: ${filteredArr[i].position}</p>
@@ -298,9 +323,9 @@ function interviewDisplay(){
             <p>Date: ${filteredArr[i].date}</p>
             <p>Status: ${filteredArr[i].status}</p>
         `;
-        div.append(btn);
-        applyCardStyle(div);
-        applications.append(div);
+        let btn = document.createElement("button");
+        btn.classList.add("btn");
+        btn.innerText = "Remove";
         btn.addEventListener("click",() => {
           let index = arr.indexOf(filteredArr[i]);
           if(index !== -1){
@@ -308,19 +333,19 @@ function interviewDisplay(){
             localStorage.setItem("applications", JSON.stringify(arr));
             interviewDisplay();
           }
-        })
+        });
+        div.append(btn);
+        applyCardStyle(div);
+        applicationList.append(div);
     }
     displayValue();
 }
 function rejectedDisplay(){
     let filteredArr = arr.filter(item => item.status === "Rejected");
-    applications.innerHTML = ``;
+    applicationList.innerHTML = ``;
     for(let i=0;i<filteredArr.length;i++){
         let div = document.createElement("div");
         div.classList.add("container");
-        let btn = document.createElement("button");
-        btn.classList.add("btn");
-        btn.innerText = "Remove";
         div.innerHTML = `
             <p>Company name: ${filteredArr[i].companyName}</p>
             <p>Position: ${filteredArr[i].position}</p>
@@ -329,9 +354,10 @@ function rejectedDisplay(){
             <p>Date: ${filteredArr[i].date}</p>
             <p>Status: ${filteredArr[i].status}</p>
         `;
-        div.append(btn);
-        applyCardStyle(div);
-        applications.append(div);
+        
+        let btn = document.createElement("button");
+        btn.classList.add("btn");
+        btn.innerText = "Remove";
         btn.addEventListener("click",() => {
           let index = arr.indexOf(filteredArr[i]);
           if(index !== -1){
@@ -339,19 +365,19 @@ function rejectedDisplay(){
             localStorage.setItem("applications", JSON.stringify(arr));
             rejectedDisplay();
           }
-        })
+        });
+        div.append(btn);
+        applyCardStyle(div);
+        applicationList.append(div);
     }
     displayValue();
 }
 function selectedDisplay(){
     let filteredArr = arr.filter(item => item.status === "Selected");
-    applications.innerHTML = ``;
+    applicationList.innerHTML = ``;
     for(let i=0;i<filteredArr.length;i++){
         let div = document.createElement("div");
         div.classList.add("container");
-        let btn = document.createElement("button");
-        btn.classList.add("btn");
-        btn.innerText = "Remove";
         div.innerHTML = `
             <p>Company name: ${filteredArr[i].companyName}</p>
             <p>Position: ${filteredArr[i].position}</p>
@@ -360,9 +386,9 @@ function selectedDisplay(){
             <p>Date: ${filteredArr[i].date}</p>
             <p>Status: ${filteredArr[i].status}</p>
         `;
-        div.append(btn);
-        applyCardStyle(div);
-        applications.append(div);
+        let btn = document.createElement("button");
+        btn.classList.add("btn");
+        btn.innerText = "Remove";
         btn.addEventListener("click",() => {
           let index = arr.indexOf(filteredArr[i]);
           if(index !== -1){
@@ -370,7 +396,10 @@ function selectedDisplay(){
             localStorage.setItem("applications", JSON.stringify(arr));
             selectedDisplay();
           }
-        })
+        });
+        div.append(btn);
+        applyCardStyle(div);
+        applicationList.append(div);
     }
     displayValue();
 }
