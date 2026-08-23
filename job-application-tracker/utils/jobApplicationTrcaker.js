@@ -12,7 +12,54 @@ let appliedCount = document.querySelector("#appliedCount");
 let interviewCount = document.querySelector("#interviewCount");
 let selectedCount = document.querySelector("#selectedCount");
 let rejectedCount = document.querySelector("#rejectedCount");
+function showToast(message) {
+    // Check if an existing toast is already active to prevent duplicates
+    let existingToast = document.querySelector(".floating-toast");
+    if (existingToast) existingToast.remove();
+
+    const toast = document.createElement("div");
+    toast.className = "floating-toast";
+    toast.textContent = message;
+
+    Object.assign(toast.style, {
+        position: "fixed",
+        top: "20px",
+        left: "50%",
+        transform: "translateX(-50%)",
+        backgroundColor: "#ef4444",
+        color: "white",
+        padding: "12px 24px",
+        borderRadius: "8px",
+        fontWeight: "600",
+        fontSize: "14px",
+        boxShadow: "0 4px 14px rgba(0, 0, 0, 0.18)",
+        zIndex: "9999",
+        transition: "opacity 0.2s ease, transform 0.2s ease",
+        opacity: "1",
+        pointerEvents: "none"
+    });
+
+    document.body.appendChild(toast);
+
+    // Hide and remove after 1 second
+    setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateX(-50%) translateY(-10px)";
+        setTimeout(() => toast.remove(), 200);
+    }, 1000);
+}
 addButton.addEventListener("click",() =>{
+    if (
+        !input.value.trim() ||
+        !position.value.trim() ||
+        !loc.value.trim() ||
+        !salary.value.trim() ||
+        !date.value.trim() ||
+        !stat.value.trim()
+    ) {
+        showToast("Please fill out all the necessary details");
+        return; // Stop execution
+    }
     arr.push({
         companyName : input.value,
         position : position.value,
