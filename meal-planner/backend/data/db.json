@@ -1,0 +1,93 @@
+{
+    "recipes": [
+        {
+            "id": "1a2b3c4d-0001-4000-8000-000000000001",
+            "name": "Pancakes",
+            "ingredients": ["2 eggs", "1 cup flour", "1 cup milk", "1 tbsp sugar", "1 tsp baking powder"],
+            "instructions": "Whisk all ingredients together into a smooth batter. Pour onto a hot greased skillet and cook until bubbles form, then flip and cook the other side.",
+            "calories": 350,
+            "tags": ["breakfast", "vegetarian"],
+            "createdAt": "2026-08-30T10:00:00.000Z"
+        },
+        {
+            "id": "1a2b3c4d-0002-4000-8000-000000000002",
+            "name": "Grilled Chicken Salad",
+            "ingredients": ["1 chicken breast", "2 cups lettuce", "1 tomato", "1/4 cucumber", "olive oil", "salt", "pepper"],
+            "instructions": "Grill the chicken breast until cooked through, slice it, and toss with chopped vegetables. Drizzle with olive oil and season to taste.",
+            "calories": 420,
+            "tags": ["lunch", "high-protein", "gluten-free"],
+            "createdAt": "2026-08-30T10:05:00.000Z"
+        },
+        {
+            "id": "1a2b3c4d-0003-4000-8000-000000000003",
+            "name": "Spaghetti Aglio e Olio",
+            "ingredients": ["200g spaghetti", "4 cloves garlic", "1/4 cup olive oil", "red chili flakes", "parsley", "salt"],
+            "instructions": "Cook spaghetti until al dente. Saute sliced garlic in olive oil until golden, add chili flakes, then toss with pasta and parsley.",
+            "calories": 480,
+            "tags": ["dinner", "vegetarian", "quick"],
+            "createdAt": "2026-08-30T10:10:00.000Z"
+        },
+        {
+            "id": "1a2b3c4d-0004-4000-8000-000000000004",
+            "name": "Vegetable Stir Fry",
+            "ingredients": ["1 cup broccoli", "1 carrot", "1 bell pepper", "2 tbsp soy sauce", "1 tbsp sesame oil", "1 clove garlic"],
+            "instructions": "Heat sesame oil in a wok, add garlic, then stir fry chopped vegetables on high heat for 5-6 minutes. Add soy sauce and toss to coat.",
+            "calories": 250,
+            "tags": ["dinner", "vegan", "quick"],
+            "createdAt": "2026-08-30T10:15:00.000Z"
+        },
+        {
+            "id": "1a2b3c4d-0005-4000-8000-000000000005",
+            "name": "Overnight Oats",
+            "ingredients": ["1/2 cup oats", "1/2 cup milk", "1 tbsp chia seeds", "1 tbsp honey", "1/2 banana"],
+            "instructions": "Combine oats, milk, chia seeds and honey in a jar. Refrigerate overnight. Top with sliced banana before eating.",
+            "calories": 300,
+            "tags": ["breakfast", "vegetarian", "make-ahead"],
+            "createdAt": "2026-08-30T10:20:00.000Z"
+        },
+        {
+            "id": "1a2b3c4d-0006-4000-8000-000000000006",
+            "name": "Beef Tacos",
+            "ingredients": ["300g ground beef", "6 taco shells", "1 cup lettuce", "1/2 cup cheddar cheese", "1 tomato", "taco seasoning"],
+            "instructions": "Brown the ground beef with taco seasoning. Fill taco shells with beef, lettuce, tomato, and cheese.",
+            "calories": 520,
+            "tags": ["dinner", "high-protein"],
+            "createdAt": "2026-08-30T10:25:00.000Z"
+        },
+        {
+            "id": "1a2b3c4d-0007-4000-8000-000000000007",
+            "name": "Margherita Pizza",
+            "ingredients": ["1 pizza dough", "1/2 cup tomato sauce", "150g mozzarella", "fresh basil", "olive oil"],
+            "instructions": "Spread tomato sauce over the dough, add mozzarella, and bake at 220C for 12-15 minutes. Top with fresh basil and a drizzle of olive oil.",
+            "calories": 600,
+            "tags": ["dinner", "vegetarian"],
+            "createdAt": "2026-08-30T10:30:00.000Z"
+        },
+        {
+            "id": "1a2b3c4d-0008-4000-8000-000000000008",
+            "name": "Greek Yogurt Parfait",
+            "ingredients": ["1 cup greek yogurt", "1/2 cup granola", "1/2 cup mixed berries", "1 tbsp honey"],
+            "instructions": "Layer yogurt, granola, and berries in a glass. Drizzle honey on top before serving.",
+            "calories": 280,
+            "tags": ["breakfast", "snack", "vegetarian"],
+            "createdAt": "2026-08-30T10:35:00.000Z"
+        },
+        {
+            "id": "1a2b3c4d-0009-4000-8000-000000000009",
+            "name": "Lentil Soup",
+            "ingredients": ["1 cup red lentils", "1 onion", "2 carrots", "2 cloves garlic", "4 cups vegetable broth", "1 tsp cumin"],
+            "instructions": "Saute onion, carrots and garlic. Add lentils, broth, and cumin. Simmer for 25 minutes until lentils are soft, then blend partially if desired.",
+            "calories": 320,
+            "tags": ["lunch", "dinner", "vegan", "gluten-free"],
+            "createdAt": "2026-08-30T10:40:00.000Z"
+        }
+    ],
+    "mealPlans": [
+        {
+            "date": "2026-08-31",
+            "breakfast": "1a2b3c4d-0001-4000-8000-000000000001",
+            "lunch": "1a2b3c4d-0002-4000-8000-000000000002",
+            "dinner": "1a2b3c4d-0003-4000-8000-000000000003"
+        }
+    ]
+}
