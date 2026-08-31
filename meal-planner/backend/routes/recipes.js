@@ -18,14 +18,22 @@ router.get("/", async (req, res) => {
 });
 
 // GET /api/recipes/:id -> get a single recipe
-router.get("/:id", async (req, res) => {
+router.get("/", async (req, res) => {
     const db = await readDB();
-    const recipe = db.recipes.find((r) => r.id === req.params.id);
+    const { search } = req.query;
 
-    if (!recipe) {
-        return res.status(404).json({ error: "Recipe not found" });
+    if (search) {
+        const term = search.toLowerCase();
+        const recipe = db.recipes.find((r) => r.name.toLowerCase().includes(term));
+
+        return res.json({
+            exists: !!recipe,
+            recipe: recipe || null
+        });
     }
-    res.json(recipe);
+
+    // no search param -> just return everything
+    res.json(db.recipes);
 });
 
 // POST /api/recipes -> create a new recipe

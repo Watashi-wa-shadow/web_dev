@@ -1,93 +1,912 @@
 {
-    "recipes": [
-        {
-            "id": "1a2b3c4d-0001-4000-8000-000000000001",
-            "name": "Pancakes",
-            "ingredients": ["2 eggs", "1 cup flour", "1 cup milk", "1 tbsp sugar", "1 tsp baking powder"],
-            "instructions": "Whisk all ingredients together into a smooth batter. Pour onto a hot greased skillet and cook until bubbles form, then flip and cook the other side.",
-            "calories": 350,
-            "tags": ["breakfast", "vegetarian"],
-            "createdAt": "2026-08-30T10:00:00.000Z"
-        },
-        {
-            "id": "1a2b3c4d-0002-4000-8000-000000000002",
-            "name": "Grilled Chicken Salad",
-            "ingredients": ["1 chicken breast", "2 cups lettuce", "1 tomato", "1/4 cucumber", "olive oil", "salt", "pepper"],
-            "instructions": "Grill the chicken breast until cooked through, slice it, and toss with chopped vegetables. Drizzle with olive oil and season to taste.",
-            "calories": 420,
-            "tags": ["lunch", "high-protein", "gluten-free"],
-            "createdAt": "2026-08-30T10:05:00.000Z"
-        },
-        {
-            "id": "1a2b3c4d-0003-4000-8000-000000000003",
-            "name": "Spaghetti Aglio e Olio",
-            "ingredients": ["200g spaghetti", "4 cloves garlic", "1/4 cup olive oil", "red chili flakes", "parsley", "salt"],
-            "instructions": "Cook spaghetti until al dente. Saute sliced garlic in olive oil until golden, add chili flakes, then toss with pasta and parsley.",
-            "calories": 480,
-            "tags": ["dinner", "vegetarian", "quick"],
-            "createdAt": "2026-08-30T10:10:00.000Z"
-        },
-        {
-            "id": "1a2b3c4d-0004-4000-8000-000000000004",
-            "name": "Vegetable Stir Fry",
-            "ingredients": ["1 cup broccoli", "1 carrot", "1 bell pepper", "2 tbsp soy sauce", "1 tbsp sesame oil", "1 clove garlic"],
-            "instructions": "Heat sesame oil in a wok, add garlic, then stir fry chopped vegetables on high heat for 5-6 minutes. Add soy sauce and toss to coat.",
-            "calories": 250,
-            "tags": ["dinner", "vegan", "quick"],
-            "createdAt": "2026-08-30T10:15:00.000Z"
-        },
-        {
-            "id": "1a2b3c4d-0005-4000-8000-000000000005",
-            "name": "Overnight Oats",
-            "ingredients": ["1/2 cup oats", "1/2 cup milk", "1 tbsp chia seeds", "1 tbsp honey", "1/2 banana"],
-            "instructions": "Combine oats, milk, chia seeds and honey in a jar. Refrigerate overnight. Top with sliced banana before eating.",
-            "calories": 300,
-            "tags": ["breakfast", "vegetarian", "make-ahead"],
-            "createdAt": "2026-08-30T10:20:00.000Z"
-        },
-        {
-            "id": "1a2b3c4d-0006-4000-8000-000000000006",
-            "name": "Beef Tacos",
-            "ingredients": ["300g ground beef", "6 taco shells", "1 cup lettuce", "1/2 cup cheddar cheese", "1 tomato", "taco seasoning"],
-            "instructions": "Brown the ground beef with taco seasoning. Fill taco shells with beef, lettuce, tomato, and cheese.",
-            "calories": 520,
-            "tags": ["dinner", "high-protein"],
-            "createdAt": "2026-08-30T10:25:00.000Z"
-        },
-        {
-            "id": "1a2b3c4d-0007-4000-8000-000000000007",
-            "name": "Margherita Pizza",
-            "ingredients": ["1 pizza dough", "1/2 cup tomato sauce", "150g mozzarella", "fresh basil", "olive oil"],
-            "instructions": "Spread tomato sauce over the dough, add mozzarella, and bake at 220C for 12-15 minutes. Top with fresh basil and a drizzle of olive oil.",
-            "calories": 600,
-            "tags": ["dinner", "vegetarian"],
-            "createdAt": "2026-08-30T10:30:00.000Z"
-        },
-        {
-            "id": "1a2b3c4d-0008-4000-8000-000000000008",
-            "name": "Greek Yogurt Parfait",
-            "ingredients": ["1 cup greek yogurt", "1/2 cup granola", "1/2 cup mixed berries", "1 tbsp honey"],
-            "instructions": "Layer yogurt, granola, and berries in a glass. Drizzle honey on top before serving.",
-            "calories": 280,
-            "tags": ["breakfast", "snack", "vegetarian"],
-            "createdAt": "2026-08-30T10:35:00.000Z"
-        },
-        {
-            "id": "1a2b3c4d-0009-4000-8000-000000000009",
-            "name": "Lentil Soup",
-            "ingredients": ["1 cup red lentils", "1 onion", "2 carrots", "2 cloves garlic", "4 cups vegetable broth", "1 tsp cumin"],
-            "instructions": "Saute onion, carrots and garlic. Add lentils, broth, and cumin. Simmer for 25 minutes until lentils are soft, then blend partially if desired.",
-            "calories": 320,
-            "tags": ["lunch", "dinner", "vegan", "gluten-free"],
-            "createdAt": "2026-08-30T10:40:00.000Z"
-        }
-    ],
-    "mealPlans": [
-        {
-            "date": "2026-08-31",
-            "breakfast": "1a2b3c4d-0001-4000-8000-000000000001",
-            "lunch": "1a2b3c4d-0002-4000-8000-000000000002",
-            "dinner": "1a2b3c4d-0003-4000-8000-000000000003"
-        }
-    ]
+  "recipes": [
+    {
+      "id": "1a2b3c4d-0001-4000-8000-000000000001",
+      "name": "Pancakes",
+      "ingredients": ["2 eggs", "1 cup flour", "1 cup milk", "1 tbsp sugar", "1 tsp baking powder"],
+      "instructions": "Whisk all ingredients together into a smooth batter. Pour onto a hot greased skillet and cook until bubbles form, then flip and cook the other side.",
+      "calories": 350,
+      "tags": ["breakfast", "vegetarian"],
+      "createdAt": "2026-08-30T10:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0002-4000-8000-000000000002",
+      "name": "Grilled Chicken Salad",
+      "ingredients": ["1 chicken breast", "2 cups lettuce", "1 tomato", "1/4 cucumber", "olive oil", "salt", "pepper"],
+      "instructions": "Grill the chicken breast until cooked through, slice it, and toss with chopped vegetables. Drizzle with olive oil and season to taste.",
+      "calories": 420,
+      "tags": ["lunch", "high-protein", "gluten-free"],
+      "createdAt": "2026-08-30T10:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0003-4000-8000-000000000003",
+      "name": "Spaghetti Aglio e Olio",
+      "ingredients": ["200g spaghetti", "4 cloves garlic", "1/4 cup olive oil", "red chili flakes", "parsley", "salt"],
+      "instructions": "Cook spaghetti until al dente. Saute sliced garlic in olive oil until golden, add chili flakes, then toss with pasta and parsley.",
+      "calories": 480,
+      "tags": ["dinner", "vegetarian", "quick"],
+      "createdAt": "2026-08-30T10:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0004-4000-8000-000000000004",
+      "name": "Vegetable Stir Fry",
+      "ingredients": ["1 cup broccoli", "1 carrot", "1 bell pepper", "2 tbsp soy sauce", "1 tbsp sesame oil", "1 clove garlic"],
+      "instructions": "Heat sesame oil in a wok, add garlic, then stir fry chopped vegetables on high heat for 5-6 minutes. Add soy sauce and toss to coat.",
+      "calories": 250,
+      "tags": ["dinner", "vegan", "quick"],
+      "createdAt": "2026-08-30T10:15:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0005-4000-8000-000000000005",
+      "name": "Overnight Oats",
+      "ingredients": ["1/2 cup oats", "1/2 cup milk", "1 tbsp chia seeds", "1 tbsp honey", "1/2 banana"],
+      "instructions": "Combine oats, milk, chia seeds and honey in a jar. Refrigerate overnight. Top with sliced banana before eating.",
+      "calories": 300,
+      "tags": ["breakfast", "vegetarian", "make-ahead"],
+      "createdAt": "2026-08-30T10:20:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0006-4000-8000-000000000006",
+      "name": "Beef Tacos",
+      "ingredients": ["300g ground beef", "6 taco shells", "1 cup lettuce", "1/2 cup cheddar cheese", "1 tomato", "taco seasoning"],
+      "instructions": "Brown the ground beef with taco seasoning. Fill taco shells with beef, lettuce, tomato, and cheese.",
+      "calories": 520,
+      "tags": ["dinner", "high-protein"],
+      "createdAt": "2026-08-30T10:25:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0007-4000-8000-000000000007",
+      "name": "Margherita Pizza",
+      "ingredients": ["1 pizza dough", "1/2 cup tomato sauce", "150g mozzarella", "fresh basil", "olive oil"],
+      "instructions": "Spread tomato sauce over the dough, add mozzarella, and bake at 220C for 12-15 minutes. Top with fresh basil and a drizzle of olive oil.",
+      "calories": 600,
+      "tags": ["dinner", "vegetarian"],
+      "createdAt": "2026-08-30T10:30:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0008-4000-8000-000000000008",
+      "name": "Greek Yogurt Parfait",
+      "ingredients": ["1 cup greek yogurt", "1/2 cup granola", "1/2 cup mixed berries", "1 tbsp honey"],
+      "instructions": "Layer yogurt, granola, and berries in a glass. Drizzle honey on top before serving.",
+      "calories": 280,
+      "tags": ["breakfast", "snack", "vegetarian"],
+      "createdAt": "2026-08-30T10:35:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0009-4000-8000-000000000009",
+      "name": "Lentil Soup",
+      "ingredients": ["1 cup red lentils", "1 onion", "2 carrots", "2 cloves garlic", "4 cups vegetable broth", "1 tsp cumin"],
+      "instructions": "Saute onion, carrots and garlic. Add lentils, broth, and cumin. Simmer for 25 minutes until lentils are soft, then blend partially if desired.",
+      "calories": 320,
+      "tags": ["lunch", "dinner", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T10:40:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0010-4000-8000-000000000010",
+      "name": "Butter Chicken",
+      "ingredients": ["500g chicken thigh", "1 cup tomato puree", "1/2 cup heavy cream", "2 tbsp butter", "1 tbsp garam masala", "1 tbsp kasuri methi", "1 tbsp ginger garlic paste"],
+      "instructions": "Marinate and sear chicken. Simmer pureed tomatoes with spices and butter, blend into smooth gravy, stir in cream, fenugreek, and cooked chicken.",
+      "calories": 620,
+      "tags": ["indian", "dinner", "high-protein", "curry"],
+      "createdAt": "2026-08-30T10:45:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0011-4000-8000-000000000011",
+      "name": "Paneer Butter Masala",
+      "ingredients": ["250g paneer", "3 tomatoes", "1 onion", "1/4 cup cashews", "2 tbsp butter", "1 tsp red chili powder", "1/2 tsp garam masala"],
+      "instructions": "Blend sauteed onion, tomatoes, and soaked cashews into a rich puree. Cook with butter, spices, and add paneer cubes.",
+      "calories": 490,
+      "tags": ["indian", "dinner", "vegetarian", "curry"],
+      "createdAt": "2026-08-30T10:50:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0012-4000-8000-000000000012",
+      "name": "Masala Dosa",
+      "ingredients": ["2 cups fermented dosa batter", "3 boiled potatoes", "1 onion", "1/2 tsp mustard seeds", "1 green chili", "curry leaves", "oil"],
+      "instructions": "Prepare spiced mashed potato filling with mustard seeds and onions. Spread batter thin on hot griddle, crisp it up, add filling, and roll.",
+      "calories": 340,
+      "tags": ["indian", "breakfast", "vegetarian", "vegan"],
+      "createdAt": "2026-08-30T10:55:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0013-4000-8000-000000000013",
+      "name": "Palak Paneer",
+      "ingredients": ["250g paneer", "4 cups spinach", "1 onion", "2 tomatoes", "2 cloves garlic", "1/2 tsp cumin", "1 tbsp cream"],
+      "instructions": "Blanch and blend spinach. Saute aromatics, add spinach puree and spices, simmer gently, then fold in paneer cubes.",
+      "calories": 380,
+      "tags": ["indian", "dinner", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T11:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0014-4000-8000-000000000014",
+      "name": "Chole Bhature",
+      "ingredients": ["1 cup chickpeas", "2 onions", "2 tomatoes", "1 tbsp chole masala", "2 cups all-purpose flour", "1/4 cup yogurt", "oil for frying"],
+      "instructions": "Pressure cook soaked chickpeas with spicy onion-tomato gravy. Knead flour with yogurt, roll into discs, and deep-fry puffed bhature.",
+      "calories": 720,
+      "tags": ["indian", "lunch", "vegetarian"],
+      "createdAt": "2026-08-30T11:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0015-4000-8000-000000000015",
+      "name": "Dal Tadka",
+      "ingredients": ["1 cup toor dal", "1 onion", "2 tomatoes", "3 cloves garlic", "1 tsp cumin seeds", "2 dried red chilies", "2 tbsp ghee"],
+      "instructions": "Boil toor dal with turmeric and salt. Prepare aromatic tadka by sizzling cumin, garlic, and chilies in ghee, then pour over dal.",
+      "calories": 290,
+      "tags": ["indian", "lunch", "dinner", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T11:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0016-4000-8000-000000000016",
+      "name": "Chicken Biryani",
+      "ingredients": ["500g chicken", "2 cups basmati rice", "2 onions fried", "1/2 cup yogurt", "1 tbsp biryani masala", "saffron milk", "mint leaves"],
+      "instructions": "Marinate chicken in spiced yogurt. Parboil basmati rice with whole spices. Layer meat, fried onions, herbs, and rice, then slow steam on dum.",
+      "calories": 650,
+      "tags": ["indian", "dinner", "lunch", "high-protein"],
+      "createdAt": "2026-08-30T11:15:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0017-4000-8000-000000000017",
+      "name": "Aloo Gobi",
+      "ingredients": ["1 head cauliflower", "2 potatoes", "1 onion", "1 tsp turmeric", "1 tsp coriander powder", "1/2 tsp garam masala", "fresh cilantro"],
+      "instructions": "Stir fry chopped potatoes and cauliflower florets with onions, ginger, and ground spices until tender and lightly charred.",
+      "calories": 240,
+      "tags": ["indian", "lunch", "dinner", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T11:20:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0018-4000-8000-000000000018",
+      "name": "Poha",
+      "ingredients": ["2 cups flattened rice", "1 onion", "1 potato", "1/4 cup peanuts", "1/2 tsp mustard seeds", "1/2 tsp turmeric", "curry leaves", "lemon juice"],
+      "instructions": "Rinse flattened rice. Splutter mustard seeds, roast peanuts, sauté potatoes and onions with turmeric, toss poha, and finish with lemon.",
+      "calories": 270,
+      "tags": ["indian", "breakfast", "vegan", "quick"],
+      "createdAt": "2026-08-30T11:25:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0019-4000-8000-000000000019",
+      "name": "Idli Sambar",
+      "ingredients": ["2 cups idli batter", "1/2 cup toor dal", "1 cup mixed vegetables", "1 tbsp sambar powder", "tamarind paste", "mustard seeds"],
+      "instructions": "Steam fermented rice-lentil batter into fluffy idlis. Simmer toor dal and chopped vegetables with sambar powder and tamarind tadka.",
+      "calories": 310,
+      "tags": ["indian", "breakfast", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T11:30:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0020-4000-8000-000000000020",
+      "name": "Chicken Tikka Masala",
+      "ingredients": ["500g chicken breast", "1 cup yogurt", "1 onion", "1 cup tomato sauce", "1/2 cup heavy cream", "1 tbsp garam masala", "1 tbsp paprika"],
+      "instructions": "Grill yogurt-spiced chicken skewers. Simmer a creamy, spiced tomato sauce and toss the roasted chicken chunks until coated.",
+      "calories": 580,
+      "tags": ["indian", "dinner", "high-protein"],
+      "createdAt": "2026-08-30T11:35:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0021-4000-8000-000000000021",
+      "name": "Rajma Chawal",
+      "ingredients": ["1 cup red kidney beans", "2 onions", "3 tomatoes", "1 tbsp ginger garlic paste", "1 tsp cumin", "2 cups cooked basmati rice"],
+      "instructions": "Slow cook soaked kidney beans in a spiced onion-tomato gravy until thick and tender. Serve over steaming hot basmati rice.",
+      "calories": 460,
+      "tags": ["indian", "lunch", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T11:40:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0022-4000-8000-000000000022",
+      "name": "Aloo Paratha",
+      "ingredients": ["2 cups whole wheat flour", "3 boiled potatoes", "1 green chili", "1/2 tsp chaat masala", "1/2 tsp carom seeds", "2 tbsp butter"],
+      "instructions": "Stuff spiced mashed potato filling into rolled wheat dough. Flatten carefully and shallow fry on a tawa with butter until golden brown.",
+      "calories": 390,
+      "tags": ["indian", "breakfast", "vegetarian"],
+      "createdAt": "2026-08-30T11:45:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0023-4000-8000-000000000023",
+      "name": "Mutton Rogan Josh",
+      "ingredients": ["500g mutton chunks", "1/2 cup yogurt", "2 tbsp Kashmiri chili powder", "1 tsp fennel powder", "1 tsp dry ginger", "whole spices", "mustard oil"],
+      "instructions": "Brown mutton in mustard oil with aromatic spices. Cook with whisked yogurt, Kashmiri chili, and fennel paste until meat is melt-in-mouth tender.",
+      "calories": 610,
+      "tags": ["indian", "dinner", "high-protein", "curry"],
+      "createdAt": "2026-08-30T11:50:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0024-4000-8000-000000000024",
+      "name": "Upma",
+      "ingredients": ["1 cup semolina (rava)", "1 onion", "1 green chili", "1 tsp mustard seeds", "1 tbsp urad dal", "curry leaves", "2 cups water", "ghee"],
+      "instructions": "Roast semolina dry. Sauté mustard seeds, urad dal, curry leaves, and onions in ghee. Add water, bring to boil, and stir in rava smoothly.",
+      "calories": 260,
+      "tags": ["indian", "breakfast", "vegetarian", "quick"],
+      "createdAt": "2026-08-30T11:55:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0025-4000-8000-000000000025",
+      "name": "Baingan Bharta",
+      "ingredients": ["1 large eggplant", "2 onions", "2 tomatoes", "3 cloves garlic", "1 green chili", "1/2 tsp red chili powder", "mustard oil"],
+      "instructions": "Roast whole eggplant over open flame until charred. Peel, mash, and sauté with onions, ginger, tomatoes, and basic spices.",
+      "calories": 210,
+      "tags": ["indian", "dinner", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T12:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0026-4000-8000-000000000026",
+      "name": "Medu Vada",
+      "ingredients": ["1 cup urad dal", "1 tsp whole black pepper", "1 green chili", "1 sprig curry leaves", "pinch of asafoetida", "oil for deep frying"],
+      "instructions": "Soak and grind urad dal to a fluffy batter. Shape into doughnut rings and deep fry in hot oil until crunchy and golden.",
+      "calories": 320,
+      "tags": ["indian", "breakfast", "snack", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T12:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0027-4000-8000-000000000027",
+      "name": "Kadai Chicken",
+      "ingredients": ["500g chicken", "1 bell pepper", "1 onion diced", "2 tomatoes", "1 tbsp crushed coriander seeds", "1 tsp dry red chilies", "1 tbsp ginger juliennes"],
+      "instructions": "Cook chicken in a wok with chunky peppers, onions, and freshly ground kadai spice blend until aromatic and semi-dry.",
+      "calories": 470,
+      "tags": ["indian", "dinner", "high-protein", "curry"],
+      "createdAt": "2026-08-30T12:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0028-4000-8000-000000000028",
+      "name": "Dhokla",
+      "ingredients": ["1 cup gram flour (besan)", "1 tbsp lemon juice", "1 tsp eno fruit salt", "1/2 tsp turmeric", "1 tsp mustard seeds", "green chilies", "fresh coriander"],
+      "instructions": "Mix besan batter with eno and steam for 15 minutes. Pour warm sweet-tangy tempering of mustard seeds and chilies over spongy squares.",
+      "calories": 190,
+      "tags": ["indian", "snack", "breakfast", "vegetarian"],
+      "createdAt": "2026-08-30T12:15:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0029-4000-8000-000000000029",
+      "name": "Fish Curry (Goan Style)",
+      "ingredients": ["400g kingfish fillets", "1 cup coconut milk", "4 dried red chilies", "1 tbsp coriander seeds", "1 tsp tamarind pulp", "1/2 tsp turmeric"],
+      "instructions": "Make coconut-tamarind spice paste. Simmer paste with coconut milk, add fish slices, and cook gently for 6-8 minutes.",
+      "calories": 390,
+      "tags": ["indian", "lunch", "dinner", "gluten-free", "curry"],
+      "createdAt": "2026-08-30T12:20:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0030-4000-8000-000000000030",
+      "name": "Paneer Tikka",
+      "ingredients": ["250g paneer cubes", "1 bell pepper", "1 onion", "1/2 cup thick hung curd", "1 tbsp tandoori masala", "1 tbsp mustard oil"],
+      "instructions": "Marinate cubed paneer and vegetables in spiced yogurt-mustard oil mix. Skewer and roast in oven or grill pan till charred edges appear.",
+      "calories": 350,
+      "tags": ["indian", "snack", "dinner", "vegetarian", "high-protein"],
+      "createdAt": "2026-08-30T12:25:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0031-4000-8000-000000000031",
+      "name": "Matar Paneer",
+      "ingredients": ["200g paneer", "1 cup green peas", "2 tomatoes", "1 onion", "1 tsp garam masala", "1/2 tsp turmeric", "1 tbsp coriander leaves"],
+      "instructions": "Sauté onions and puree tomatoes. Cook green peas and paneer cubes in spiced gravy until thick and flavorful.",
+      "calories": 410,
+      "tags": ["indian", "dinner", "lunch", "vegetarian", "curry"],
+      "createdAt": "2026-08-30T12:30:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0032-4000-8000-000000000032",
+      "name": "Moong Dal Khichdi",
+      "ingredients": ["1/2 cup rice", "1/2 cup yellow moong dal", "1 tsp cumin seeds", "1/4 tsp turmeric", "2 tbsp ghee", "pinch of asafoetida"],
+      "instructions": "Cook washed rice and lentils with turmeric and salt in a pressure cooker. Temper with cumin seeds fried in ghee.",
+      "calories": 310,
+      "tags": ["indian", "dinner", "comfort-food", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T12:35:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0033-4000-8000-000000000033",
+      "name": "Chicken Korma",
+      "ingredients": ["500g chicken", "1/2 cup yogurt", "1/4 cup almond paste", "2 onions fried", "1/2 tsp cardamom powder", "1 tbsp ginger garlic paste"],
+      "instructions": "Cook chicken in aromatic white gravy made of fried onion puree, yogurt, and rich almond paste on low heat.",
+      "calories": 560,
+      "tags": ["indian", "dinner", "curry", "high-protein"],
+      "createdAt": "2026-08-30T12:40:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0034-4000-8000-000000000034",
+      "name": "Pav Bhaji",
+      "ingredients": ["4 boiled potatoes", "1 cup cauliflower", "1/2 cup peas", "1 bell pepper", "3 tomatoes", "2 tbsp pav bhaji masala", "4 tbsp butter", "6 pav buns"],
+      "instructions": "Boil and mash vegetables. Cook with butter, tomatoes, and special pav bhaji masala. Serve hot with butter-toasted buns.",
+      "calories": 540,
+      "tags": ["indian", "dinner", "snack", "vegetarian"],
+      "createdAt": "2026-08-30T12:45:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0035-4000-8000-000000000035",
+      "name": "Egg Curry",
+      "ingredients": ["4 hard boiled eggs", "2 onions", "2 tomatoes", "1 tsp chili powder", "1/2 tsp turmeric", "1 tsp coriander powder", "curry leaves"],
+      "instructions": "Lightly fry hard-boiled eggs with turmeric. Prepare tomato-onion sauce with whole spices, simmer eggs for 10 minutes.",
+      "calories": 360,
+      "tags": ["indian", "dinner", "lunch", "high-protein", "gluten-free"],
+      "createdAt": "2026-08-30T12:50:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0036-4000-8000-000000000036",
+      "name": "Sambhar Vada",
+      "ingredients": ["4 medu vadas", "1 cup toor dal", "1 carrot", "1 drumstick", "1 tbsp sambar powder", "tamarind extract", "mustard seeds"],
+      "instructions": "Prepare authentic tangy vegetable sambar. Soak crispy freshly fried urad dal vadas in hot piping sambar and garnish with coriander.",
+      "calories": 420,
+      "tags": ["indian", "breakfast", "snack", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T12:55:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0037-4000-8000-000000000037",
+      "name": "Malai Kofta",
+      "ingredients": ["200g paneer", "2 boiled potatoes", "1/4 cup cashew paste", "1/2 cup cream", "2 tomatoes", "1 tsp garam masala", "oil for frying"],
+      "instructions": "Roll paneer-potato dumplings and deep fry until crisp. Make creamy cashew-tomato silk gravy and place koftas just before serving.",
+      "calories": 610,
+      "tags": ["indian", "dinner", "vegetarian"],
+      "createdAt": "2026-08-30T13:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0038-4000-8000-000000000038",
+      "name": "Bisi Bele Bath",
+      "ingredients": ["1/2 cup rice", "1/2 cup toor dal", "1 cup mixed vegetables", "2 tbsp bisi bele bath powder", "tamarind pulp", "cashews fried in ghee"],
+      "instructions": "Cook rice, dal, and veggies together. Blend with tamarind and freshly spiced aromatic powder, then temper with crunchy ghee cashews.",
+      "calories": 430,
+      "tags": ["indian", "lunch", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T13:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0039-4000-8000-000000000039",
+      "name": "Prawn Curry (Kerala Style)",
+      "ingredients": ["300g cleaned prawns", "1 cup coconut milk", "1 piece kudampuli (pot tamarind)", "1/2 tsp fenugreek seeds", "1 tbsp Kashmiri chili", "curry leaves"],
+      "instructions": "Cook prawns with kudampuli, curry leaves, and spicy red curry paste in an earthen pot. Stir in rich coconut milk and simmer.",
+      "calories": 360,
+      "tags": ["indian", "dinner", "gluten-free", "curry"],
+      "createdAt": "2026-08-30T13:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0040-4000-8000-000000000040",
+      "name": "Samosa",
+      "ingredients": ["2 cups flour", "3 boiled potatoes", "1/2 cup green peas", "1 tsp cumin seeds", "1 tsp garam masala", "oil for deep frying"],
+      "instructions": "Make crisp pastry cones filled with spicy cumin-seasoned mashed potatoes and peas. Deep fry on medium flame until golden.",
+      "calories": 310,
+      "tags": ["indian", "snack", "vegan"],
+      "createdAt": "2026-08-30T13:15:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0041-4000-8000-000000000041",
+      "name": "Bhindi Masala",
+      "ingredients": ["300g okra (bhindi)", "2 sliced onions", "1 tomato", "1 tsp amchur (dry mango powder)", "1/2 tsp turmeric", "1 tsp coriander powder"],
+      "instructions": "Sauté chopped dry okra until non-slimy. Stir fry with sliced onions, tomatoes, and tangy dry mango spice mix.",
+      "calories": 180,
+      "tags": ["indian", "lunch", "dinner", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T13:20:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0042-4000-8000-000000000042",
+      "name": "Dal Makhani",
+      "ingredients": ["1 cup black whole urad dal", "1/4 cup kidney beans", "3 tbsp butter", "2 tbsp cream", "1 cup tomato puree", "1 tsp kasuri methi"],
+      "instructions": "Slow cook black lentils and kidney beans for hours. Infuse with butter, pureed tomatoes, and finish with cream and fenugreek.",
+      "calories": 480,
+      "tags": ["indian", "dinner", "vegetarian", "curry"],
+      "createdAt": "2026-08-30T13:25:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0043-4000-8000-000000000043",
+      "name": "Paneer Bhurji",
+      "ingredients": ["200g crumbled paneer", "1 onion", "1 tomato", "1 green chili", "1/2 tsp turmeric", "1/2 tsp pav bhaji masala", "fresh cilantro"],
+      "instructions": "Sauté chopped onions, green chilies, and tomatoes. Add seasonings and quickly toss crumbled paneer on high heat for 3 minutes.",
+      "calories": 320,
+      "tags": ["indian", "breakfast", "dinner", "vegetarian", "high-protein"],
+      "createdAt": "2026-08-30T13:30:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0044-4000-8000-000000000044",
+      "name": "Chicken Chettinad",
+      "ingredients": ["500g chicken", "1/2 cup grated coconut", "1 tbsp black pepper", "1 tbsp fennel seeds", "star anise", "curry leaves", "sesame oil"],
+      "instructions": "Roast whole spices and coconut, then grind into fresh Chettinad paste. Cook chicken pieces in oil with paste until dark and deeply spiced.",
+      "calories": 530,
+      "tags": ["indian", "dinner", "curry", "high-protein"],
+      "createdAt": "2026-08-30T13:35:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0045-4000-8000-000000000045",
+      "name": "Methi Thepla",
+      "ingredients": ["2 cups whole wheat flour", "1 cup fresh fenugreek leaves", "2 tbsp yogurt", "1/2 tsp turmeric", "1 tsp sesame seeds", "oil"],
+      "instructions": "Knead flour with chopped fresh fenugreek, yogurt, and spices into soft dough. Roll thinly and roast lightly on hot skillet.",
+      "calories": 210,
+      "tags": ["indian", "breakfast", "snack", "vegetarian"],
+      "createdAt": "2026-08-30T13:40:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0046-4000-8000-000000000046",
+      "name": "Kadhi Pakora",
+      "ingredients": ["1 cup sour yogurt", "1/2 cup besan", "1 onion", "1 tsp fenugreek seeds", "1 tsp mustard seeds", "dried red chilies", "ghee"],
+      "instructions": "Make crisp onion gram-flour fritters. Simmer a velvety yogurt-besan stew, drop in warm pakoras, and temper with mustard and chili.",
+      "calories": 370,
+      "tags": ["indian", "lunch", "vegetarian", "curry"],
+      "createdAt": "2026-08-30T13:45:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0047-4000-8000-000000000047",
+      "name": "Vegetable Pulao",
+      "ingredients": ["1.5 cups basmati rice", "1 cup mixed diced vegetables", "1 onion", "whole garam masala", "1 tbsp ghee", "3 cups water"],
+      "instructions": "Sauté whole spices, sliced onions, and vegetables in ghee. Add soaked basmati rice and water, pressure cook on low heat for one whistle.",
+      "calories": 330,
+      "tags": ["indian", "lunch", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T13:50:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0048-4000-8000-000000000048",
+      "name": "Jeera Rice",
+      "ingredients": ["1 cup basmati rice", "1.5 tsp cumin seeds", "1 bay leaf", "2 tbsp ghee", "2 cups water", "salt"],
+      "instructions": "Sizzle cumin seeds and bay leaf in ghee. Add drained soaked basmati rice, cook until fragrant, add salted water, and steam until fluffy.",
+      "calories": 240,
+      "tags": ["indian", "lunch", "dinner", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T13:55:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0049-4000-8000-000000000049",
+      "name": "Pani Puri",
+      "ingredients": ["20 hollow puri crisps", "1 cup boiled potatoes & chickpeas", "1 cup spiced mint water", "1/2 cup tamarind chutney", "chaat masala"],
+      "instructions": "Crack open crispy puris, stuff with spiced potato filling, spoon in sweet tamarind sauce, and douse in iced tangy mint water.",
+      "calories": 220,
+      "tags": ["indian", "snack", "street-food", "vegan"],
+      "createdAt": "2026-08-30T14:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0050-4000-8000-000000000050",
+      "name": "Kashmiri Dum Aloo",
+      "ingredients": ["12 baby potatoes", "1/2 cup whisked curd", "1 tbsp Kashmiri red chili", "1 tsp fennel powder", "1/2 tsp ginger powder", "mustard oil"],
+      "instructions": "Prick and deep fry baby potatoes. Cook gently on sealed dum in a vibrant, spiced yogurt gravy without onions or garlic.",
+      "calories": 380,
+      "tags": ["indian", "dinner", "lunch", "vegetarian", "curry"],
+      "createdAt": "2026-08-30T14:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0051-4000-8000-000000000051",
+      "name": "Mushroom Masala",
+      "ingredients": ["250g button mushrooms", "2 onions", "2 tomatoes", "1 tsp garam masala", "1/2 tsp turmeric", "1 tbsp kasuri methi"],
+      "instructions": "Sauté sliced button mushrooms until moisture evaporates. Simmer in thick roasted onion and tomato masala sauce.",
+      "calories": 220,
+      "tags": ["indian", "dinner", "lunch", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T14:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0052-4000-8000-000000000052",
+      "name": "Egg Fried Rice",
+      "ingredients": ["2 cups cooked cold jasmine rice", "2 eggs", "1/2 cup scallions", "2 tbsp soy sauce", "1 tbsp sesame oil", "1/2 cup peas"],
+      "instructions": "Scramble eggs in hot wok. Add chilled rice, scallions, peas, soy sauce, and sesame oil; stir-fry vigorously on high heat.",
+      "calories": 380,
+      "tags": ["lunch", "dinner", "quick"],
+      "createdAt": "2026-08-30T14:15:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0053-4000-8000-000000000053",
+      "name": "Caesar Salad",
+      "ingredients": ["1 head romaine lettuce", "1/2 cup parmesan cheese", "1/2 cup croutons", "3 tbsp caesar dressing", "1 tbsp lemon juice"],
+      "instructions": "Chop crisp romaine lettuce, toss thoroughly with creamy Caesar dressing, top with crunchy croutons and shaved parmesan.",
+      "calories": 320,
+      "tags": ["lunch", "salad", "vegetarian"],
+      "createdAt": "2026-08-30T14:20:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0054-4000-8000-000000000054",
+      "name": "Beef Cheeseburger",
+      "ingredients": ["1 beef patty", "1 burger bun", "1 slice cheddar cheese", "1 lettuce leaf", "2 tomato slices", "1 tbsp burger sauce"],
+      "instructions": "Pan sear or grill beef patty, melt cheddar on top. Toast bun, spread sauce, layer lettuce, tomato, and patty.",
+      "calories": 640,
+      "tags": ["dinner", "high-protein"],
+      "createdAt": "2026-08-30T14:25:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0055-4000-8000-000000000055",
+      "name": "Avocado Toast",
+      "ingredients": ["2 slices sourdough bread", "1 ripe avocado", "1 tsp red pepper flakes", "1 tsp lemon juice", "salt", "olive oil"],
+      "instructions": "Toast sourdough slices. Mash ripe avocado with lemon juice and salt, spread over warm toast, and sprinkle with red pepper flakes.",
+      "calories": 290,
+      "tags": ["breakfast", "vegan", "quick"],
+      "createdAt": "2026-08-30T14:30:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0056-4000-8000-000000000056",
+      "name": "Fettuccine Alfredo",
+      "ingredients": ["200g fettuccine pasta", "1/2 cup heavy cream", "1/2 cup grated parmesan", "3 tbsp butter", "2 cloves garlic", "black pepper"],
+      "instructions": "Cook fettuccine al dente. Melt butter with minced garlic, whisk in heavy cream and parmesan until smooth, then toss with pasta.",
+      "calories": 590,
+      "tags": ["dinner", "vegetarian"],
+      "createdAt": "2026-08-30T14:35:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0057-4000-8000-000000000057",
+      "name": "Chicken Noodle Soup",
+      "ingredients": ["200g shredded chicken", "1 cup egg noodles", "2 carrots", "2 celery stalks", "4 cups chicken broth", "thyme"],
+      "instructions": "Simmer chopped carrots and celery in chicken broth. Add noodles and shredded cooked chicken; cook until noodles are tender.",
+      "calories": 310,
+      "tags": ["lunch", "dinner", "comfort-food"],
+      "createdAt": "2026-08-30T14:40:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0058-4000-8000-000000000058",
+      "name": "Falafel Wrap",
+      "ingredients": ["4 falafels", "1 pita bread", "1/4 cup hummus", "1/4 cup diced cucumber & tomato", "2 tbsp tahini sauce"],
+      "instructions": "Warm pita bread, spread thick hummus, place fried falafels, add diced cucumber-tomato salad, and drizzle with tahini sauce.",
+      "calories": 460,
+      "tags": ["lunch", "vegan"],
+      "createdAt": "2026-08-30T14:45:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0059-4000-8000-000000000059",
+      "name": "Grilled Cheese Sandwich",
+      "ingredients": ["2 slices bread", "2 slices cheddar cheese", "1 slice swiss cheese", "2 tbsp butter"],
+      "instructions": "Butter outer sides of bread, place cheeses in between, grill in a pan on medium-low heat until crisp and cheese is fully melted.",
+      "calories": 410,
+      "tags": ["lunch", "snack", "vegetarian", "quick"],
+      "createdAt": "2026-08-30T14:50:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0060-4000-8000-000000000060",
+      "name": "Shrimp Scampi",
+      "ingredients": ["250g large shrimp", "150g linguine", "3 cloves garlic", "2 tbsp butter", "2 tbsp olive oil", "1/4 cup lemon juice", "parsley"],
+      "instructions": "Sauté garlic and shrimp in butter and olive oil until pink. Deglaze with lemon juice, toss with cooked linguine, and top with parsley.",
+      "calories": 470,
+      "tags": ["dinner", "high-protein", "seafood"],
+      "createdAt": "2026-08-30T14:55:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0061-4000-8000-000000000061",
+      "name": "French Toast",
+      "ingredients": ["2 thick brioche slices", "1 egg", "1/4 cup milk", "1/2 tsp cinnamon", "1 tbsp butter", "maple syrup"],
+      "instructions": "Whisk egg, milk, and cinnamon. Dip bread slices to coat well, then fry in melted butter until golden on both sides. Serve with syrup.",
+      "calories": 360,
+      "tags": ["breakfast", "vegetarian"],
+      "createdAt": "2026-08-30T15:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0062-4000-8000-000000000062",
+      "name": "Tomato Basil Bruschetta",
+      "ingredients": ["1 baguette sliced", "3 ripe tomatoes", "2 cloves garlic", "fresh basil leaves", "2 tbsp olive oil", "balsamic glaze"],
+      "instructions": "Toast baguette slices rubbed with garlic. Top with diced tomatoes tossed in olive oil and basil, then drizzle balsamic glaze.",
+      "calories": 230,
+      "tags": ["snack", "appetizer", "vegan"],
+      "createdAt": "2026-08-30T15:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0063-4000-8000-000000000063",
+      "name": "Chicken Quesadilla",
+      "ingredients": ["2 flour tortillas", "150g shredded chicken", "1/2 cup shredded cheddar", "1/4 cup salsa", "1 tbsp sour cream"],
+      "instructions": "Fill tortilla with seasoned chicken and cheese. Fold and crisp on hot pan on both sides until cheese is bubbling.",
+      "calories": 510,
+      "tags": ["lunch", "dinner", "high-protein"],
+      "createdAt": "2026-08-30T15:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0064-4000-8000-000000000064",
+      "name": "Beef Lasagna",
+      "ingredients": ["6 lasagna noodles", "300g ground beef", "1 cup marinara sauce", "1 cup ricotta cheese", "1 cup mozzarella"],
+      "instructions": "Layer cooked pasta noodles with seasoned ground beef marinara, ricotta, and mozzarella cheese. Bake at 190C for 35 minutes.",
+      "calories": 670,
+      "tags": ["dinner", "high-protein"],
+      "createdAt": "2026-08-30T15:15:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0065-4000-8000-000000000065",
+      "name": "Chicken Teriyaki Bowl",
+      "ingredients": ["200g chicken thighs", "3 tbsp teriyaki sauce", "1 cup steamed white rice", "1/2 cup steamed broccoli", "sesame seeds"],
+      "instructions": "Pan sear chicken until browned, glaze with thick teriyaki sauce. Serve over warm white rice with steamed broccoli florets.",
+      "calories": 520,
+      "tags": ["lunch", "dinner", "high-protein"],
+      "createdAt": "2026-08-30T15:20:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0066-4000-8000-000000000066",
+      "name": "Pad Thai",
+      "ingredients": ["150g flat rice noodles", "100g tofu or chicken", "1 egg", "1/2 cup bean sprouts", "2 tbsp pad thai sauce", "crushed peanuts"],
+      "instructions": "Stir fry noodles with protein, egg, and tamarind-based pad thai sauce. Garnish with crunchy bean sprouts, lime, and crushed peanuts.",
+      "calories": 480,
+      "tags": ["dinner", "lunch"],
+      "createdAt": "2026-08-30T15:25:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0067-4000-8000-000000000067",
+      "name": "Hummus & Pita Plate",
+      "ingredients": ["1 cup chickpeas", "2 tbsp tahini", "2 cloves garlic", "2 tbsp lemon juice", "olive oil", "2 pita breads"],
+      "instructions": "Blend chickpeas, tahini, lemon juice, garlic, and ice water until silky smooth. Drizzle olive oil and serve with warm pita.",
+      "calories": 380,
+      "tags": ["lunch", "snack", "vegan"],
+      "createdAt": "2026-08-30T15:30:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0068-4000-8000-000000000068",
+      "name": "Mushroom Risotto",
+      "ingredients": ["1 cup arborio rice", "200g sliced mushrooms", "3 cups warm vegetable broth", "1/4 cup parmesan", "2 tbsp butter", "1 shallot"],
+      "instructions": "Sauté shallots and mushrooms. Slowly ladle hot broth into arborio rice, stirring constantly until creamy, then finish with butter and cheese.",
+      "calories": 440,
+      "tags": ["dinner", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T15:35:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0069-4000-8000-000000000069",
+      "name": "Guacamole & Chips",
+      "ingredients": ["2 ripe avocados", "1 lime juiced", "1/4 red onion diced", "1 tomato diced", "fresh cilantro", "tortilla chips"],
+      "instructions": "Mash avocados coarsely with lime juice, stir in diced onions, tomatoes, and cilantro. Serve alongside crunchy tortilla chips.",
+      "calories": 360,
+      "tags": ["snack", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T15:40:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0070-4000-8000-000000000070",
+      "name": "Minestrone Soup",
+      "ingredients": ["1 can cannellini beans", "1 zucchini", "1 carrot", "1/2 cup small pasta", "3 cups tomato broth", "Italian herbs"],
+      "instructions": "Simmer mixed garden vegetables, beans, and pasta in rich tomato herb broth until tender. Top with grated parmesan cheese.",
+      "calories": 270,
+      "tags": ["lunch", "dinner", "vegetarian"],
+      "createdAt": "2026-08-30T15:45:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0071-4000-8000-000000000071",
+      "name": "Egg Salad Sandwich",
+      "ingredients": ["3 hard boiled eggs", "2 tbsp mayonnaise", "1 tsp dijon mustard", "chives", "2 slices whole wheat bread", "salt & pepper"],
+      "instructions": "Chop hard-boiled eggs and mix with mayonnaise, dijon mustard, salt, pepper, and chopped chives. Spread generously between bread.",
+      "calories": 390,
+      "tags": ["lunch", "vegetarian", "quick"],
+      "createdAt": "2026-08-30T15:50:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0072-4000-8000-000000000072",
+      "name": "BBQ Chicken Wings",
+      "ingredients": ["500g chicken wings", "1/2 cup barbecue sauce", "1 tsp garlic powder", "1 tsp smoked paprika", "1 tbsp olive oil"],
+      "instructions": "Season wings with spices and bake at 200C for 35 minutes until crispy. Toss with BBQ sauce and broil for 3 minutes.",
+      "calories": 540,
+      "tags": ["dinner", "snack", "high-protein", "gluten-free"],
+      "createdAt": "2026-08-30T15:55:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0073-4000-8000-000000000073",
+      "name": "Club Sandwich",
+      "ingredients": ["3 slices toasted bread", "100g sliced turkey/chicken", "2 bacon strips", "1 lettuce leaf", "2 tomato slices", "mayonnaise"],
+      "instructions": "Assemble triple-decker sandwich with toasted bread, mayo, cooked bacon, sliced poultry, lettuce, and tomatoes. Slice diagonally.",
+      "calories": 560,
+      "tags": ["lunch", "high-protein"],
+      "createdAt": "2026-08-30T16:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0074-4000-8000-000000000074",
+      "name": "Tuna Salad Bowl",
+      "ingredients": ["1 can drained tuna", "2 cups salad greens", "1/4 cup sweet corn", "1 boiled egg", "olive oil & lemon dressing"],
+      "instructions": "Toss salad greens with sweet corn and flaky canned tuna. Top with sliced hard-boiled egg and light vinaigrette dressing.",
+      "calories": 340,
+      "tags": ["lunch", "high-protein", "gluten-free"],
+      "createdAt": "2026-08-30T16:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0075-4000-8000-000000000075",
+      "name": "Blueberry Smoothie Bowl",
+      "ingredients": ["1 cup frozen blueberries", "1 frozen banana", "1/2 cup almond milk", "1 tbsp chia seeds", "sliced almonds for topping"],
+      "instructions": "Blend frozen blueberries, banana, and almond milk into thick smoothie. Pour into bowl and decorate with chia seeds and almond flakes.",
+      "calories": 260,
+      "tags": ["breakfast", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T16:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0076-4000-8000-000000000076",
+      "name": "Beef Shepherd's Pie",
+      "ingredients": ["400g ground beef", "3 boiled potatoes mashed", "1/2 cup peas and carrots", "1 cup beef stock", "2 tbsp butter"],
+      "instructions": "Cook ground beef with vegetables and broth. Transfer to baking dish, spread buttery mashed potatoes over top, and bake until golden brown.",
+      "calories": 580,
+      "tags": ["dinner", "comfort-food"],
+      "createdAt": "2026-08-30T16:15:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0077-4000-8000-000000000077",
+      "name": "Baked Salmon with Asparagus",
+      "ingredients": ["1 salmon fillet (200g)", "1 bunch asparagus", "1 tbsp olive oil", "1 lemon sliced", "garlic powder", "dill"],
+      "instructions": "Place salmon and asparagus on sheet tray, drizzle with olive oil, season with herbs and lemon slices. Bake at 200C for 14 minutes.",
+      "calories": 430,
+      "tags": ["dinner", "high-protein", "gluten-free", "healthy"],
+      "createdAt": "2026-08-30T16:20:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0078-4000-8000-000000000078",
+      "name": "Belgian Waffles",
+      "ingredients": ["1.5 cups flour", "1 egg", "1 cup milk", "1/4 cup melted butter", "1 tbsp sugar", "1 tsp vanilla"],
+      "instructions": "Whisk batter until combined. Pour into preheated waffle iron and cook until golden crisp. Serve with fresh strawberries and syrup.",
+      "calories": 390,
+      "tags": ["breakfast", "vegetarian"],
+      "createdAt": "2026-08-30T16:25:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0079-4000-8000-000000000079",
+      "name": "Chicken Caesar Wrap",
+      "ingredients": ["1 large tortilla", "150g grilled chicken", "1 cup shredded romaine", "2 tbsp caesar dressing", "2 tbsp parmesan"],
+      "instructions": "Toss grilled chicken and romaine with caesar dressing. Lay on tortilla, sprinkle parmesan, roll tightly, and cut in half.",
+      "calories": 460,
+      "tags": ["lunch", "quick", "high-protein"],
+      "createdAt": "2026-08-30T16:30:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0080-4000-8000-000000000080",
+      "name": "Stuffed Bell Peppers",
+      "ingredients": ["3 large bell peppers", "200g cooked ground meat or rice", "1/2 cup black beans", "1/2 cup tomato sauce", "1/2 cup cheese"],
+      "instructions": "Hollow bell peppers, fill with seasoned meat, rice, and beans mix. Top with cheese and bake at 180C for 30 minutes.",
+      "calories": 380,
+      "tags": ["dinner", "gluten-free"],
+      "createdAt": "2026-08-30T16:35:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0081-4000-8000-000000000081",
+      "name": "Mango Lassi",
+      "ingredients": ["1 cup mango pulp", "1 cup chilled yogurt", "1/2 cup milk", "2 tbsp sugar", "pinch of cardamom powder"],
+      "instructions": "Blend mango pulp, fresh yogurt, milk, sugar, and cardamom powder until frothy and smooth. Serve chilled.",
+      "calories": 240,
+      "tags": ["indian", "drink", "snack", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T16:40:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0082-4000-8000-000000000082",
+      "name": "Kashmiri Pulao",
+      "ingredients": ["1.5 cups basmati rice", "1/4 cup cashews and almonds", "1/4 cup pomegranate seeds", "1 sliced apple", "saffron milk", "2 tbsp ghee"],
+      "instructions": "Cook basmati rice infused with whole aromatic spices and saffron. Fold in fried nuts, dry fruits, and fresh seasonal fruit garnishes.",
+      "calories": 390,
+      "tags": ["indian", "lunch", "dinner", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T16:45:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0083-4000-8000-000000000083",
+      "name": "Fish Amritsari",
+      "ingredients": ["300g white fish fillets", "2 tbsp besan", "1 tbsp carom seeds (ajwain)", "1 tbsp ginger garlic paste", "1 tsp red chili", "lemon juice", "oil for frying"],
+      "instructions": "Marinate fish with ajwain, spices, and besan batter. Deep-fry on medium flame until golden brown and super crispy.",
+      "calories": 360,
+      "tags": ["indian", "snack", "high-protein", "seafood"],
+      "createdAt": "2026-08-30T16:50:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0084-4000-8000-000000000084",
+      "name": "Sabudana Khichdi",
+      "ingredients": ["1 cup tapioca pearls (sabudana)", "1 boiled potato", "1/2 cup roasted crushed peanuts", "1 green chili", "1 tsp cumin", "ghee"],
+      "instructions": "Soak sabudana overnight. Sauté cumin, potato, and green chilies in ghee, fold in peanuts and tapioca pearls, and cook until translucent.",
+      "calories": 350,
+      "tags": ["indian", "breakfast", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T16:55:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0085-4000-8000-000000000085",
+      "name": "Gobi Manchurian (Dry)",
+      "ingredients": ["1 head cauliflower florets", "1/4 cup cornstarch", "2 tbsp soy sauce", "1 tbsp chili paste", "spring onions", "ginger & garlic", "oil"],
+      "instructions": "Coat florets in cornstarch and deep fry until crisp. Toss in wok with ginger, garlic, soy sauce, and scallions on high flame.",
+      "calories": 310,
+      "tags": ["indian", "snack", "indo-chinese", "vegan"],
+      "createdAt": "2026-08-30T17:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0086-4000-8000-000000000086",
+      "name": "Chicken 65",
+      "ingredients": ["300g boneless chicken pieces", "2 tbsp cornstarch", "1 tbsp yogurt", "curry leaves", "red chili powder", "garlic", "oil for deep frying"],
+      "instructions": "Marinate chicken in spiced curd and cornstarch batter. Deep-fry till crisp, then temper with hot curry leaves, green chilies, and garlic.",
+      "calories": 440,
+      "tags": ["indian", "snack", "high-protein", "starter"],
+      "createdAt": "2026-08-30T17:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0087-4000-8000-000000000087",
+      "name": "Rava Dosa",
+      "ingredients": ["1/2 cup rava (semolina)", "1/2 cup rice flour", "1/4 cup flour", "1 green chili", "1 tsp cumin", "black pepper", "2.5 cups water"],
+      "instructions": "Make thin watery batter. Pour from height onto hot greased griddle to form lacy, thin, crispy crepe without spreading.",
+      "calories": 280,
+      "tags": ["indian", "breakfast", "vegetarian", "quick"],
+      "createdAt": "2026-08-30T17:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0088-4000-8000-000000000088",
+      "name": "Keema Matar",
+      "ingredients": ["400g minced lamb or chicken", "1 cup green peas", "2 onions", "2 tomatoes", "1 tbsp ginger garlic paste", "1 tsp garam masala"],
+      "instructions": "Sauté minced meat with whole spices, onions, and garlic. Stir in green peas and tomato gravy; simmer until thickened.",
+      "calories": 490,
+      "tags": ["indian", "dinner", "high-protein", "curry"],
+      "createdAt": "2026-08-30T17:15:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0089-4000-8000-000000000089",
+      "name": "Misal Pav",
+      "ingredients": ["1 cup sprouted moth beans", "1 onion", "2 tbsp misal masala", "1/2 cup farsan/sev topping", "lemon", "4 pav buns"],
+      "instructions": "Cook sprouted moth beans in a spicy, fiery red gravy (kat/rassa). Garnish with chopped onions and farsan; serve with toasted pav.",
+      "calories": 460,
+      "tags": ["indian", "breakfast", "lunch", "vegan", "spicy"],
+      "createdAt": "2026-08-30T17:20:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0090-4000-8000-000000000090",
+      "name": "Paneer Jalfrezi",
+      "ingredients": ["200g paneer fingers", "1 bell pepper sliced", "1 onion sliced", "2 tomatoes pureed", "1 green chili sliced", "1 tsp cumin"],
+      "instructions": "Stir fry long slices of peppers and onions on high heat. Add spiced tomato puree and toss in paneer fingers for a semi-dry dish.",
+      "calories": 360,
+      "tags": ["indian", "dinner", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T17:25:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0091-4000-8000-000000000091",
+      "name": "Chana Masala",
+      "ingredients": ["1 cup white chickpeas", "2 onions", "2 tomatoes", "1 tbsp chana masala", "1 tea bag (for dark color)", "1 tsp cumin", "ginger juliennes"],
+      "instructions": "Boil soaked chickpeas with a black tea bag. Simmer in a spicy, tangy dry mango and coriander onion gravy.",
+      "calories": 370,
+      "tags": ["indian", "lunch", "dinner", "vegan", "gluten-free"],
+      "createdAt": "2026-08-30T17:30:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0092-4000-8000-000000000092",
+      "name": "Lemon Rice",
+      "ingredients": ["2 cups cooked rice", "3 tbsp lemon juice", "1 tsp mustard seeds", "2 tbsp peanuts", "1 tsp turmeric", "curry leaves", "2 green chilies"],
+      "instructions": "Temper mustard seeds, curry leaves, green chilies, and peanuts in oil with turmeric. Mix gently into warm rice and lemon juice.",
+      "calories": 290,
+      "tags": ["indian", "lunch", "vegan", "gluten-free", "quick"],
+      "createdAt": "2026-08-30T17:35:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0093-4000-8000-000000000093",
+      "name": "Gulab Jamun",
+      "ingredients": ["1 cup milk powder (khoya)", "1/4 cup flour", "1/4 tsp baking soda", "1 cup sugar syrup flavored with rose water and cardamom", "ghee for frying"],
+      "instructions": "Knead dough, form small crack-free balls, deep fry slowly in ghee until dark golden, and soak in warm sugar syrup for 2 hours.",
+      "calories": 380,
+      "tags": ["indian", "dessert", "vegetarian"],
+      "createdAt": "2026-08-30T17:40:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0094-4000-8000-000000000094",
+      "name": "Gajar Ka Halwa",
+      "ingredients": ["500g grated red carrots", "2 cups whole milk", "1/2 cup sugar", "3 tbsp ghee", "1/4 cup chopped almonds & cashews", "cardamom"],
+      "instructions": "Simmer grated carrots in milk until milk evaporates. Sauté in ghee with sugar, cardamom, and roasted dry fruits until glossy.",
+      "calories": 410,
+      "tags": ["indian", "dessert", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T17:45:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0095-4000-8000-000000000095",
+      "name": "Masala Chai",
+      "ingredients": ["1 cup water", "1 cup milk", "2 tsp black tea leaves", "1 crushed cardamom pod", "1 small crushed ginger piece", "2 tsp sugar"],
+      "instructions": "Boil crushed ginger and cardamom in water. Add black tea leaves, bring to vigorous boil, add milk and sugar, simmer, and strain.",
+      "calories": 110,
+      "tags": ["indian", "drink", "breakfast", "vegetarian"],
+      "createdAt": "2026-08-30T17:50:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0096-4000-8000-000000000096",
+      "name": "Veg Hakka Noodles",
+      "ingredients": ["200g noodles", "1 cup shredded cabbage & carrots", "1 bell pepper", "2 tbsp soy sauce", "1 tbsp vinegar", "1 tsp chili sauce"],
+      "instructions": "Boil noodles al dente. Toss in smoking hot wok with shredded vegetables, soy sauce, and vinegar for 2 minutes on highest flame.",
+      "calories": 340,
+      "tags": ["indo-chinese", "dinner", "vegan", "quick"],
+      "createdAt": "2026-08-30T17:55:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0097-4000-8000-000000000097",
+      "name": "Shakshuka",
+      "ingredients": ["3 eggs", "1 can crushed tomatoes", "1 bell pepper", "1 onion", "2 cloves garlic", "1 tsp cumin", "1 tsp paprika"],
+      "instructions": "Simmer spiced tomato and bell pepper sauce. Make small wells, crack whole eggs into the sauce, cover, and poach until whites set.",
+      "calories": 310,
+      "tags": ["breakfast", "lunch", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T18:00:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0098-4000-8000-000000000098",
+      "name": "Caprese Salad",
+      "ingredients": ["2 ripe tomatoes sliced", "150g fresh mozzarella sliced", "fresh basil leaves", "2 tbsp extra virgin olive oil", "balsamic glaze", "salt"],
+      "instructions": "Alternate slices of ripe tomatoes and fresh mozzarella on a plate. Tuck in fresh basil leaves, season with flaky salt, and drizzle olive oil.",
+      "calories": 270,
+      "tags": ["lunch", "salad", "vegetarian", "gluten-free"],
+      "createdAt": "2026-08-30T18:05:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0099-4000-8000-000000000099",
+      "name": "Fish and Chips",
+      "ingredients": ["300g white cod fillets", "1 cup flour", "1/2 cup soda water/batter", "2 large potatoes cut into thick chips", "oil for deep frying", "tartar sauce"],
+      "instructions": "Deep fry potato chips until crisp. Dip fish fillets into cold bubbly batter, deep fry until golden brown, and serve with tartar sauce.",
+      "calories": 680,
+      "tags": ["dinner", "lunch", "seafood"],
+      "createdAt": "2026-08-30T18:10:00.000Z"
+    },
+    {
+      "id": "1a2b3c4d-0100-4000-8000-000000000100",
+      "name": "Chocolate Lava Cake",
+      "ingredients": ["100g dark chocolate", "1/2 cup butter", "2 eggs", "2 tbsp sugar", "2 tbsp flour"],
+      "instructions": "Melt dark chocolate with butter. Whisk in eggs, sugar, and flour. Pour into greased ramekins and bake at 200C for 10 minutes until center remains molten.",
+      "calories": 430,
+      "tags": ["dessert", "vegetarian"],
+      "createdAt": "2026-08-30T18:15:00.000Z"
+    }
+  ],
+  "mealPlans": [
+    {
+      "date": "2026-08-31",
+      "breakfast": "1a2b3c4d-0001-4000-8000-000000000001",
+      "lunch": "1a2b3c4d-0002-4000-8000-000000000002",
+      "dinner": "1a2b3c4d-0003-4000-8000-000000000003"
+    }
+  ]
 }
