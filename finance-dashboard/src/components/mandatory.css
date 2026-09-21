@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Sidebar container (exactly 20vw wide) */
+.mandatory {
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #eef2f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    z-index: 100;
+}
+
+/* Link items */
+.link-box {
+    margin: 4px 0;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.link-box a {
+    color: #1a202c;
+    text-decoration: none;
+    display: block;
+    padding: 10px 14px;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.link-box:hover {
+    background-color: #f1f5f9;
+}
+
+/* Highlight the first/active link like the picture */
+.link-box:first-of-type {
+    background-color: #e9ecef;
+}
+
+.link-box:first-of-type a {
+    font-weight: 700;
+    color: #000000;
+}
+
+/* Dark mode bar pinned to the bottom */
+.dark-mode {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #eef2f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dark-mode p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a202c;
+    text-transform: capitalize;
+}
+
+/* Button styled as the toggle pill */
+.btn {
+    width: 50px;
+    height: 26px;
+    border-radius: 20px;
+    border: none;
+    background-color: #b0b5bc;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}

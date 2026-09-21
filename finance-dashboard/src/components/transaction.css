@@ -1,0 +1,90 @@
+body{
+    margin-left :21vw;
+    margin-top: 0;
+}
+.header{
+    display: flex;
+    flex-wrap:nowrap;        
+    align-items: center;
+    gap: 1.5vhw;         
+    min-height: 10vh;
+}
+.h2{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.search{
+    margin-left: 2vw;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.choice{
+    margin-left: 2vw;
+    width: 20%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.add-btn {
+  height: 40px;              /* same height as .search and .choice */
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;        /* same radius as your inputs */
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;       /* keeps "+ Add" on one line */
+  flex-shrink: 0;            /* stops the header from squeezing it */
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+.add-btn:active {
+  transform: translateY(1px);
+}
+.main-body, .row{
+    display : flex;
+    gap : 3vw;
+    margin-bottom: 1vh;
+}
+
+.date{
+    width : 12vw;
+}
+.description{
+    width: 17vw;
+}
+.category{
+    width : 13vw;
+}
+.amount-used{
+    width : 10vw;
+}
+.delete-btn{
+    margin-right: 1vw;
+    height : 3vh;
+    width : 6vw;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: azure;
+    background-color: rgb(224, 73, 73);
+}
+.icon-btn{
+    height : 3vh;
+    width : 3vw;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
