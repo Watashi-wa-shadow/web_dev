@@ -1,0 +1,258 @@
+/* ==========================================================================
+   Base Design Tokens & Reset
+   ========================================================================== */
+:root {
+  --bg-primary: #ffffff;
+  --bg-subtle: #f8fafc;
+  --border-color: #e2e8f0;
+  --input-border: #cbd5e1;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --primary-accent: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger-color: #ef4444;
+  --danger-hover: #dc2626;
+  --missed-badge-bg: #fee2e2;
+  --radius: 8px;
+}
+
+/* Minimal fix 1: Dark theme values */
+body.dark-theme {
+  --bg-primary: #0f172a;
+  --bg-subtle: #1e293b;
+  --border-color: #334155;
+  --input-border: #475569;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+/* Minimal fix 2: Whole page background & text */
+body {
+  margin: 0;
+  margin-left: 21vw;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Header Section & Add Toggle Button
+   ========================================================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.header .h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  height: 38px;
+  padding: 0 1.1rem;
+  background-color: var(--primary-accent);
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.add-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.add-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   Add Goal Form Row
+   ========================================================================== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--bg-subtle);
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+.row input {
+  flex: 1 1 140px;
+  min-width: 120px;
+  height: 38px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background-color: var(--bg-primary); /* Swapped from #ffffff to avoid mixing */
+  color: var(--text-main);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.row input:focus {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 1.25rem;
+  background-color: var(--primary-accent);
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.icon-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.icon-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   Data Grid / Table
+   ========================================================================== */
+.main-body {
+  display: grid;
+  grid-template-columns: 50px 2fr 1.5fr 1fr 1fr 70px;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.925rem;
+  color: var(--text-main);
+  box-sizing: border-box;
+}
+
+/* Header Row Appearance */
+.header + .row + .main-body,
+.header + .main-body {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.6rem;
+}
+
+/* Checkbox Column */
+.main-body input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  cursor: pointer;
+  accent-color: var(--primary-accent);
+  margin: 0;
+  display: block;
+}
+
+/* Missed Task Badge */
+.main-body span[title] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--missed-badge-bg);
+  color: var(--danger-hover);
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1;
+  cursor: help;
+}
+
+/* Delete Row Button */
+.main-body button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--danger-color);
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+}
+
+.main-body button:hover {
+  background-color: var(--danger-color);
+  color: #ffffff;
+  border-color: var(--danger-color);
+}
+
+/* ==========================================================================
+   Empty State
+   ========================================================================== */
+.empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Mobile Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 640px) {
+  .row input {
+    flex: 1 1 100%;
+  }
+
+  .icon-btn {
+    width: 100%;
+  }
+
+  .main-body {
+    grid-template-columns: 36px 1.5fr 1fr 60px;
+    gap: 0.5rem;
+  }
+
+  /* Hide Date and Price columns to prevent cramped text */
+  .main-body > div:nth-child(3),
+  .main-body > div:nth-child(4) {
+    display: none;
+  }
+}

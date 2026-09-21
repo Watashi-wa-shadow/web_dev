@@ -21,7 +21,7 @@ body {
     top: 0;
 }
 .other-part{
-    margin-left: 20vw;
+    /* margin-left: 20vw; */
     padding: 0 1.5rem;
     min-height : 80vh;
     

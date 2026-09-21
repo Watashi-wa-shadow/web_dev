@@ -1,85 +1,205 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* Sidebar container (exactly 20vw wide) */
+/* ==========================================================================
+   Global Design Tokens (Matching Goals Palette)
+   ========================================================================== */
+:root {
+  --bg-primary: #ffffff;
+  --bg-subtle: #f8fafc;
+  --border-color: #e2e8f0;
+  --input-border: #cbd5e1;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --primary-accent: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger-color: #ef4444;
+  --radius: 8px;
+}
+
+/* Active Dark Theme Tokens */
+body.dark-theme,
+html.dark-theme {
+  --bg-primary: #0f172a;
+  --bg-subtle: #1e293b;
+  --border-color: #334155;
+  --input-border: #475569;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+/* ==========================================================================
+   Global Root & Page Body (Applies Across All Pages)
+   ========================================================================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin-left: 21vw; /* Keeps all page content clear of the 20vw sidebar */
+}
+
+/* Automatic Dark Mode coverage for other pages (Home, Transactions, Charts) */
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  border-color: var(--input-border);
+}
+
+body.dark-theme table,
+body.dark-theme th,
+body.dark-theme td {
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Sidebar Container (20vw wide)
+   ========================================================================== */
 .mandatory {
-    width: 20vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #ffffff;
-    padding: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid #eef2f6;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    z-index: 100;
+  width: 20vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eef2f6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  z-index: 100;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Link items */
+/* Dark mode sidebar background & right border */
+body.dark-theme .mandatory {
+  background-color: #1e293b;
+  border-right-color: #334155;
+}
+
+/* ==========================================================================
+   Navigation Links
+   ========================================================================== */
 .link-box {
-    margin: 4px 0;
-    border-radius: 8px;
-    transition: background-color 0.2s ease;
+  margin: 4px 0;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 }
 
 .link-box a {
-    color: #1a202c;
-    text-decoration: none;
-    display: block;
-    padding: 10px 14px;
-    font-size: 1.05rem;
-    font-weight: 500;
+  color: #1a202c;
+  text-decoration: none;
+  display: block;
+  padding: 10px 14px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
+/* Hover state: Light Mode */
 .link-box:hover {
-    background-color: #f1f5f9;
+  background-color: #f1f5f9;
 }
 
-/* Highlight the first/active link like the picture */
+/* First/Active link: Light Mode */
 .link-box:first-of-type {
-    background-color: #e9ecef;
+  background-color: #e9ecef;
 }
 
 .link-box:first-of-type a {
-    font-weight: 700;
-    color: #000000;
+  font-weight: 700;
+  color: #000000;
 }
 
-/* Dark mode bar pinned to the bottom */
+/* Links & active states: Dark Mode */
+body.dark-theme .link-box a {
+  color: #94a3b8;
+}
+
+body.dark-theme .link-box:hover {
+  background-color: #334155;
+}
+
+body.dark-theme .link-box:hover a {
+  color: #f8fafc;
+}
+
+body.dark-theme .link-box:first-of-type {
+  background-color: #334155;
+}
+
+body.dark-theme .link-box:first-of-type a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Dark Mode Bottom Toggle Row
+   ========================================================================== */
 .dark-mode {
-    margin-top: auto;
-    padding-top: 16px;
-    border-top: 1px solid #eef2f6;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #eef2f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color 0.2s ease;
+}
+
+body.dark-theme .dark-mode {
+  border-top-color: #334155;
 }
 
 .dark-mode p {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #1a202c;
-    text-transform: capitalize;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a202c;
+  text-transform: capitalize;
+  transition: color 0.2s ease;
 }
 
-/* Button styled as the toggle pill */
+body.dark-theme .dark-mode p {
+  color: #f8fafc;
+}
+
+/* ==========================================================================
+   Toggle Pill Button
+   ========================================================================== */
 .btn {
-    width: 50px;
-    height: 26px;
-    border-radius: 20px;
-    border: none;
-    background-color: #b0b5bc;
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 20px;
+  border: none;
+  background-color: #b0b5bc;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 0.2s ease, transform 0.05s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Button active state when dark mode is enabled */
+body.dark-theme .btn {
+  background-color: #2563eb;
 }
