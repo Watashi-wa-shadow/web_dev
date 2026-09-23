@@ -24,6 +24,8 @@ body {
     /* margin-left: 20vw; */
     padding: 0 1.5rem;
     min-height : 80vh;
+    min-width: 0;
+
     
 }
 

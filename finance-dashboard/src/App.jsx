@@ -5,14 +5,12 @@ import { Mandatory } from './components/mandatory'
 import { Transcation } from './components/transaction'
 import { Charts } from './components/charts'
 import { Goals } from './components/goals'
-import { useStored, defaultSummary } from './components/storage'
+import { useStored, defaultSummary,useSummary } from './components/storage'
 
 import './App.css'
 
 function App() {
-    const [balance, setBalance] = useState(defaultSummary.balance);
-    const [income, setIncome] = useState(defaultSummary.income);
-    const [expenses, setExpenses] = useState(defaultSummary.expenses);
+    const { income, expenses, setIncome, setExpenses } = useSummary();
 
     const [cashflow, setCashflow] = useStored("cashflow", []);
     return (
@@ -22,9 +20,10 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Home 
-                    balance={balance}
                     income={income}
+                    onIncomeChange={setIncome}
                     expenses={expenses}
+                    onExpenseChange={setExpenses}
                     cashflow = {cashflow}
                     setCashflow={setCashflow}
                 />} />
@@ -33,7 +32,7 @@ function App() {
                     setCashflow={setCashflow}
                 />} />
                 <Route path="/charts" element={<Charts 
-                    cashflow={cashflow}
+                    monthlyCashflow={cashflow}
                 />} />
                 <Route path="/goals" element={<Goals />} />
             </Routes>

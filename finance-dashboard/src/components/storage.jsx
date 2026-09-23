@@ -1,7 +1,18 @@
 import { useSyncExternalStore, useMemo } from 'react'
 
-export const defaultSummary = { balance: 100000, income: 50000, expenses: 20000 };
+export const defaultSummary = { income: 50000, expenses: 0 };
 
+export function useSummary() {
+  const [summary, setSummary] = useStored("summary", defaultSummary);
+
+  const setIncome = (income) =>
+    setSummary((prev) => ({ ...prev, income }));
+
+  const setExpenses = (expenses) =>
+    setSummary((prev) => ({ ...prev, expenses }));
+
+  return { ...summary, setSummary, setIncome, setExpenses };
+}
 const listeners = new Set();
 
 function subscribe(cb) {
