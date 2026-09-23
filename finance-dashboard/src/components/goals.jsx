@@ -45,7 +45,29 @@ export function Goals() {
     setNewGoal(emptyGoal);
     setShowForm(false);
   };
+    const [editingId, setEditingId] = useState(null);
+    const [draft, setDraft] = useState(null);
 
+    const handleEdit = (item) => {
+    setEditingId(item.id);
+    setDraft({ ...item }); // copy, so the original stays unchanged until save
+  };
+
+  const handleSave = () => {
+    updateGoal(draft.id, {
+      name: draft.name,
+      date: draft.date,
+      price: Number(draft.price),
+      budget: Number(draft.budget),
+    });
+    setEditingId(null);
+    setDraft(null);
+  };
+
+  const handleCancel = () => {
+    setEditingId(null);
+    setDraft(null);
+  };
   return (
     <>
       <div className="header">
@@ -80,6 +102,7 @@ export function Goals() {
         goals.map((g, index) => {
           const status = getStatus(g);
           const key = g.id ?? index;
+          const isEditing = editingId === g.id;
           return (
             <div className="main-body" key={key}>
               <div>
@@ -93,14 +116,65 @@ export function Goals() {
                   />
                 )}
               </div>
-              <div style={g.completed ? { textDecoration: "line-through" } : undefined}>{g.name}</div>
-              <div>{g.date}</div>
-              <div>{g.price}</div>
-              <div>{g.budget}</div>
-              <div><button onClick={() => removeGoal && removeGoal(g.id)}>Delete</button></div>
-            </div>
-          );
-        })
+               {isEditing ? (
+        <>
+          <div>
+            <input
+              value={draft.name}
+              onChange={(e) => setDraft({ ...draft, name: e.target.value })}
+            />
+          </div>
+          <div>
+            <input
+              type="date"
+              value={draft.date}
+              onChange={(e) => setDraft({ ...draft, date: e.target.value })}
+            />
+          </div>
+          <div>
+            <input
+              type="number"
+              value={draft.price}
+              onChange={(e) => setDraft({ ...draft, price: e.target.value })}
+            />
+          </div>
+          <div>
+            <input
+              type="number"
+              value={draft.budget}
+              onChange={(e) => setDraft({ ...draft, budget: e.target.value })}
+            />
+          </div>
+        </>
+      ) : (
+        <>
+          <div style={g.completed ? { textDecoration: "line-through" } : undefined}>
+            {g.name}
+          </div>
+          <div>{g.date}</div>
+          <div>{g.price}</div>
+          <div>{g.budget}</div>
+        </>
+      )}
+
+      <div>
+        {isEditing ? (
+          <>
+            <button onClick={handleSave}>Save</button>
+            <button onClick={handleCancel}>Cancel</button>
+          </>
+        ) : (
+          <button className="edit-btn" onClick={() => handleEdit(g)}>✏️</button>
+        )}
+      </div>
+
+        <div>
+            <button onClick={() => removeGoal && removeGoal(g.id)}>Delete</button>
+          </div>
+        </div>
+      );
+      })
+         
       )}
     </>
   );
