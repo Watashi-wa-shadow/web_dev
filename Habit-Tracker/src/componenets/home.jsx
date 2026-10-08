@@ -1,11 +1,13 @@
 import { Mandatory } from './mandatory';
 import { Data } from './data';
 import './home.css';
-export function Home(){
+export function Home({ categories, habits }){
     return(
         <>
             <div className='mandatory'>
-                <Mandatory />
+                <Mandatory 
+                    categories={categories}
+                />
             </div>
             <div className='other-part'>
 
