@@ -6,12 +6,34 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
-.mandatory{
-    max-width : 20vw;
-    height: 100vh;
-    border: 1px solid rgb(41, 39, 39);
-}
-.other-part{
-    border: 2px solid rgb(41, 39, 39);
 
+.mandatory {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 100vh;
+  border-right: 1px solid rgb(41, 39, 39);
+  background-color: #fff; 
+  z-index: 10;
+}
+
+.other-part {
+  margin-left: 20vw; 
+  min-height: 100vh;
+  width: 80vw;
+  background-color: #cbe8f5;
+  border: 2px solid rgb(19, 65, 95);
+}
+.Habit-details{
+    display : flex;
+    flex-wrap: wrap
+}
+.habits{
+    width : 200px;
+    padding : 16px;
+}
+.habits-P{
+    font-size: 1.2rem;
+    font-weight: 480;
 }
