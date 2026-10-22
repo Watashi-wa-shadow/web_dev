@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import './App.css'
 import { Home } from './componenets/home'
-
+import { Fitness } from './componenets/fitness';
+import { Health } from './componenets/health';
+import { Coding } from './componenets/coding';
+import { Mandatory } from './componenets/mandatory';
 const initialCategories = [ 
     {
         id: "c9a646d3-9c61-4cd7-894e-3735ff88c603",
@@ -75,7 +78,8 @@ function App() {
   const [habits, setHabits] = useState(initialHabits);
 
   return (
-    <>
+    <BrowserRouter>
+      <Mandatory categories={categories} />
       <Routes>
           <Route path="/" 
             element={<Home 
@@ -84,9 +88,30 @@ function App() {
             habits={habits}
             setHabits = {setHabits}
           />} />
+          <Route path="/fitness" 
+            element={<Fitness 
+            categories={categories} 
+            setCategories={setCategories}
+            habits={habits}
+            setHabits = {setHabits}
+          />} />
+          <Route path="/health" 
+            element={<Health
+            categories={categories} 
+            setCategories={setCategories}
+            habits={habits}
+            setHabits = {setHabits}
+          />} />
+          <Route path="/coding" 
+            categories={categories} 
+            setCategories={setCategories}
+            element={<Coding 
+            habits={habits}
+            setHabits = {setHabits}
+          />} />
       </Routes>
       
-    </>
+    </BrowserRouter>
   )
 }
 
