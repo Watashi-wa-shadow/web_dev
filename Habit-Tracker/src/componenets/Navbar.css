@@ -1,0 +1,88 @@
+.top-navbar {
+  margin-left: 20vw;
+  width: 80vw;
+  min-height: 8vh;
+  padding: 1.4vh 1.5vw;
+  background-color: #e6f4fb;
+  border-left: 0.15rem solid rgb(19, 65, 95);
+  border-right: 0.15rem solid rgb(19, 65, 95);
+  border-top: 0.15rem solid rgb(19, 65, 95);
+  border-bottom: 0.15rem solid #9fc1de;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vh 1vw;
+  cursor: default;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.navbar-title {
+  font-size: clamp(1.2rem, 1.8vw, 1.9rem);
+  font-weight: 700;
+  color: #0f2744;
+  text-transform: capitalize;
+  cursor: default;
+}
+
+.navbar-stats {
+  font-size: clamp(0.8rem, 0.95vw, 0.95rem);
+  font-weight: 600;
+  color: #1f3a58;
+  background-color: #cbe8f5;
+  padding: 0.35em 0.85em;
+  border-radius: 1rem;
+  border: 0.08rem solid #9fc1de;
+  cursor: default;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.navbar-stats:hover {
+  transform: translateY(-0.18rem) scale(1.03);
+  box-shadow: 0 0.35rem 0.65rem rgba(15, 39, 68, 0.18);
+  background-color: #d9eff9;
+}
+
+.navbar-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6vw;
+}
+
+.filter-pill {
+  padding: 0.55vh 0.95vw;
+  font-size: clamp(0.8rem, 0.9vw, 0.92rem);
+  font-weight: 600;
+  color: #274768;
+  background-color: #f4f9fd;
+  border: 0.1rem solid #9fc1de;
+  border-radius: 1rem;
+  cursor: default;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.filter-pill:hover {
+  transform: translateY(-0.18rem) scale(1.03);
+  box-shadow: 0 0.35rem 0.65rem rgba(15, 39, 68, 0.2);
+  background-color: #cbe8f5;
+  color: #0f2744;
+}
+
+.active-pill {
+  background-color: #1f3a58;
+  color: #f4f9fd;
+  border-color: #1f3a58;
+  box-shadow: 0 0.2rem 0.45rem rgba(15, 39, 68, 0.16);
+}
+
+.active-pill:hover {
+  transform: translateY(-0.18rem) scale(1.03);
+  box-shadow: 0 0.4rem 0.75rem rgba(15, 39, 68, 0.26);
+  background-color: #0f2744;
+  color: #f4f9fd;
+}

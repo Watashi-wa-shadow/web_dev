@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import './page.css';
-export function Coding({ categories, setCategories, habits, setHabits }) {
+export function Coding({ categories, setCategories, habits, setHabits, statusFilter }) {
   const [title, setTitle] = useState('');
   const [target, setTarget] = useState('');
   const [priority, setPriority] = useState('Medium');
@@ -17,7 +17,9 @@ export function Coding({ categories, setCategories, habits, setHabits }) {
   const codingHabits = habits.filter(
     (c) => c.categoryId.toLowerCase() === 'coding'
   );
-
+  const visibleHabits = codingHabits.filter(
+    (h) => statusFilter === 'All' || h.status === statusFilter
+  );
   const handleAddHabit = (e) => {
     e.preventDefault();
     if (!title.trim() || !target.trim()) return;

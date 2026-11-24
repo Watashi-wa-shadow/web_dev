@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import './page.css';
-export function Fitness({ categories, setCategories, habits, setHabits }) {
+export function Fitness({ categories, setCategories, habits, setHabits, statusFilter }) {
   const [title, setTitle] = useState('');
   const [target, setTarget] = useState('');
   const [priority, setPriority] = useState('Medium');
@@ -17,7 +17,9 @@ export function Fitness({ categories, setCategories, habits, setHabits }) {
   const fitnessHabits = habits.filter(
     (c) => c.categoryId.toLowerCase() === 'fitness'
   );
-
+  const visibleHabits = fitnessHabits.filter(
+    (h) => statusFilter === 'All' || h.status === statusFilter
+  );
   const handleAddHabit = (e) => {
     e.preventDefault();
     if (!title.trim() || !target.trim()) return;

@@ -7,6 +7,7 @@ import { Health } from './componenets/health';
 import { Coding } from './componenets/coding';
 import { Mandatory } from './componenets/mandatory';
 import { CategoryPage } from './componenets/CategoryPage';
+import { Navbar } from './componenets/Navbar';
 
 const initialCategories = [
   {
@@ -92,6 +93,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem('habit_tracker_habits', JSON.stringify(habits));
   }, [habits]);
+  const [statusFilter, setStatusFilter] = useState('All');
 
   return (
     <BrowserRouter>
@@ -100,6 +102,11 @@ function App() {
         setCategories={setCategories}
         habits={habits}
         setHabits={setHabits}
+      />
+      <Navbar
+        habits={habits}
+        statusFilter={statusFilter}
+        setStatusFilter={setStatusFilter}
       />
       <Routes>
         <Route
@@ -110,6 +117,7 @@ function App() {
               setCategories={setCategories}
               habits={habits}
               setHabits={setHabits}
+              statusFilter={statusFilter}
             />
           }
         />
@@ -121,6 +129,7 @@ function App() {
               setCategories={setCategories}
               habits={habits}
               setHabits={setHabits}
+              statusFilter={statusFilter}
             />
           }
         />
@@ -132,6 +141,7 @@ function App() {
               setCategories={setCategories}
               habits={habits}
               setHabits={setHabits}
+              statusFilter={statusFilter}
             />
           }
         />
@@ -143,6 +153,7 @@ function App() {
               setCategories={setCategories}
               habits={habits}
               setHabits={setHabits}
+              statusFilter={statusFilter}
             />
           }
         />
@@ -154,6 +165,7 @@ function App() {
               setCategories={setCategories}
               habits={habits}
               setHabits={setHabits}
+              statusFilter={statusFilter}
             />
           }
         />

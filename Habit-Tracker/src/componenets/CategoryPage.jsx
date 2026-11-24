@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import './page.css';
-export function CategoryPage({ categories, setCategories, habits, setHabits }) {
+export function CategoryPage({ categories, setCategories, habits, setHabits, statusFilter }) {
   const { categoryName } = useParams();
   const [title, setTitle] = useState('');
   const [target, setTarget] = useState('');
@@ -19,7 +19,9 @@ export function CategoryPage({ categories, setCategories, habits, setHabits }) {
   const filteredHabits = habits.filter(
     (c) => c.categoryId.toLowerCase() === currentCategory.name.toLowerCase()
   );
-
+  const visibleHabits = filteredHabits.filter(
+    (h) => statusFilter === 'All' || h.status === statusFilter
+  );
   const handleAddHabit = (e) => {
     e.preventDefault();
     if (!title.trim() || !target.trim()) return;

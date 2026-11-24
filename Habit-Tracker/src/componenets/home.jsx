@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './home.css';
 
-export function Home({ categories, setCategories, habits, setHabits }) {
+export function Home({ categories, setCategories, habits, setHabits,statusFilter }) {
   const [selectedCategory, setSelectedCategory] = useState(
     categories.length > 0 ? categories[0].name : ''
   );
@@ -45,6 +45,9 @@ export function Home({ categories, setCategories, habits, setHabits }) {
         habits.map((h) => (h.id === habitId ? { ...h, status: newStatus } : h))
     );
     };
+  const visibleHabits = habits.filter(
+    (h) => statusFilter === 'All' || h.status === statusFilter
+  );
   return (
     <>
       <div className='other-part'>
